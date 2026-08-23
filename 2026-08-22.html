@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ten Words · 22 August 2026</title>
+<title>Five Words · 22 August 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -55,12 +55,13 @@
     margin: 0;
   }
   .date { font-size: 13px; color: var(--muted); text-align: right; }
-  .lede { font-size: 17px; color: var(--muted); margin: 0 0 22px; max-width: 42ch; }
+  .lede { font-size: 17px; color: var(--muted); margin: 0 0 12px; max-width: 44ch; }
+  .key { margin: 0 0 22px; font-size: 12px; color: var(--muted); }
   article {
     background: var(--card);
     border: 1px solid rgba(36,28,20,.08);
     padding: 18px 18px 14px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
   .num { font-size: 11px; letter-spacing: .18em; color: var(--rust); margin: 0 0 4px; }
   h2 {
@@ -70,23 +71,18 @@
     letter-spacing: -.02em;
     margin: 0 0 4px;
   }
-  .meta {
-    margin: 0 0 10px;
-    font-size: 12px;
-    letter-spacing: .02em;
-    color: var(--muted);
-  }
-  .ipa { font-style: normal; }
+  .meta { margin: 0 0 10px; font-size: 12px; color: var(--muted); }
   .sense { margin: 0 0 10px; font-size: 16px; }
   .ex {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     font-style: italic;
     color: var(--muted);
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 1.4;
     padding-left: 10px;
     border-left: 2px solid var(--rule);
   }
-  .diagram { display: block; color: var(--ink); margin: 2px 0 0; }
+  .diagram { display: block; color: var(--ink); margin: 4px 0 0; }
   .diagram line { stroke: var(--ink); stroke-width: 1.1; }
   .diagram text {
     fill: var(--ink);
@@ -113,16 +109,9 @@
     text-transform: uppercase;
     color: var(--muted);
   }
-  .key {
-    margin: 8px 0 20px;
-    font-size: 12px;
-    color: var(--muted);
-  }
-
   @page { size: letter; margin: 0.55in 0.5in; }
   @media print {
-    body { background: #f3ead8; }
-    article, .check { break-inside: avoid; page-break-inside: avoid; }
+    article, .check { break-inside: avoid; }
     .page { padding: 0; max-width: none; }
   }
 </style>
@@ -132,27 +121,29 @@
     <header>
       <div>
         <p class="kicker">Quill · Daily lesson</p>
-        <h1>Ten Words</h1>
+        <h1>Five Words</h1>
       </div>
       <p class="date">Saturday<br>22 August 2026</p>
     </header>
-    <p class="lede">Meaning first. Origin sits quiet under the word. The line drawing is a Reed–Kellogg diagram of the example.</p>
+    <p class="lede">Five words, each in a sentence with some weight. The line drawing is the main clause of that sentence.</p>
     <p class="key">Diagram: subject | verb | object. A backslash after the verb is a predicate adjective. Words hanging off the line are modifiers.</p>
       <article>
         <p class="num">01</p>
         <h2>ephemeral</h2>
         <p class="meta">adj · <span class='ipa'>/əˈfɛməɹəl/</span> · Greek ephḗmeros, “for a day” · 1560s</p>
         <p class="sense">It does not last. A sunset, a trend, a mood. Not the same as rare.</p>
-        <p class="ex">The rainbow was ephemeral.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
+        <p class="ex">The rainbow over the lake was ephemeral, gone before we reached the dock.</p>
+        <svg class="diagram" viewBox="0 0 340 80" width="100%" height="80" aria-hidden="true">
         <line x1="16" y1="28" x2="324" y2="28" />
         <line x1="118" y1="18" x2="118" y2="38" />
         <line x1="214" y1="28" x2="248" y2="50" />
         <text x="67" y="24" text-anchor="middle">rainbow</text>
         <text x="166" y="24" text-anchor="middle">was</text>
-        <text x="270" y="24" text-anchor="middle">ephemeral</text>
+        <text x="278" y="24" text-anchor="middle">ephemeral</text>
         <line x1="67" y1="28" x2="52" y2="56" />
-        <text x="40" y="68" text-anchor="start">The</text>
+        <text x="18" y="70" text-anchor="start">The</text>
+        <line x1="90" y1="28" x2="78" y2="56" />
+        <text x="72" y="70" text-anchor="start">over the lake</text>
         </svg>
       </article>
       <article>
@@ -160,16 +151,26 @@
         <h2>pragmatic</h2>
         <p class="meta">adj · <span class='ipa'>/pɹæɡˈmætɪk/</span> · Greek prâgma, “a thing done” · via Latin</p>
         <p class="sense">You pick what works over what is ideal. The decision, not the object.</p>
-        <p class="ex">She took a pragmatic approach.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
-        <line x1="16" y1="28" x2="324" y2="28" />
-        <line x1="118" y1="18" x2="118" y2="38" />
-        <line x1="214" y1="18" x2="214" y2="38" />
-        <text x="67" y="24" text-anchor="middle">She</text>
-        <text x="166" y="24" text-anchor="middle">took</text>
-        <text x="270" y="24" text-anchor="middle">approach</text>
-        <line x1="270" y1="28" x2="255" y2="56" />
-        <text x="248" y="68" text-anchor="start">a pragmatic</text>
+        <p class="ex">She took a pragmatic approach and fixed the leak before anyone wasted a new coat of paint.</p>
+        <svg class="diagram" viewBox="0 0 340 126" width="100%" height="126" aria-hidden="true">
+        <line x1="16" y1="26" x2="324" y2="26" />
+        <line x1="88" y1="16" x2="88" y2="36" />
+        <line x1="168" y1="16" x2="168" y2="36" />
+        <text x="50" y="22" text-anchor="middle">She</text>
+        <text x="128" y="22" text-anchor="middle">took</text>
+        <text x="230" y="22" text-anchor="middle">approach</text>
+        <line x1="230" y1="26" x2="216" y2="52" />
+        <text x="200" y="66" text-anchor="start">a pragmatic</text>
+        <line x1="16" y1="78" x2="324" y2="78" />
+        <line x1="88" y1="68" x2="88" y2="88" />
+        <line x1="168" y1="68" x2="168" y2="88" />
+        <text x="50" y="74" text-anchor="middle">She</text>
+        <text x="128" y="74" text-anchor="middle">fixed</text>
+        <text x="230" y="74" text-anchor="middle">leak</text>
+        <line x1="230" y1="78" x2="216" y2="104" />
+        <text x="208" y="118" text-anchor="start">the</text>
+        <line x1="260" y1="78" x2="248" y2="104" />
+        <text x="246" y="118" text-anchor="start">before painting</text>
         </svg>
       </article>
       <article>
@@ -177,18 +178,20 @@
         <h2>candid</h2>
         <p class="meta">adj · Latin candidus, “white, sincere” · 1620s</p>
         <p class="sense">Honest in a plain, unpolished way. Not cruel. You skip the sugar.</p>
-        <p class="ex">His candid review named the problem.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
+        <p class="ex">His candid review named the broken parts of the plan instead of pretending the launch was fine.</p>
+        <svg class="diagram" viewBox="0 0 340 80" width="100%" height="80" aria-hidden="true">
         <line x1="16" y1="28" x2="324" y2="28" />
         <line x1="118" y1="18" x2="118" y2="38" />
-        <line x1="214" y1="18" x2="214" y2="38" />
+        <line x1="200" y1="18" x2="200" y2="38" />
         <text x="67" y="24" text-anchor="middle">review</text>
-        <text x="166" y="24" text-anchor="middle">named</text>
-        <text x="270" y="24" text-anchor="middle">problem</text>
-        <line x1="67" y1="28" x2="52" y2="56" />
-        <text x="40" y="68" text-anchor="start">His candid</text>
-        <line x1="270" y1="28" x2="255" y2="56" />
-        <text x="248" y="68" text-anchor="start">the</text>
+        <text x="159" y="24" text-anchor="middle">named</text>
+        <text x="262" y="24" text-anchor="middle">parts</text>
+        <line x1="67" y1="28" x2="50" y2="56" />
+        <text x="16" y="70" text-anchor="start">His candid</text>
+        <line x1="262" y1="28" x2="248" y2="56" />
+        <text x="200" y="70" text-anchor="start">the broken</text>
+        <line x1="290" y1="28" x2="278" y2="56" />
+        <text x="270" y="70" text-anchor="start">of the plan</text>
         </svg>
       </article>
       <article>
@@ -196,126 +199,43 @@
         <h2>mitigate</h2>
         <p class="meta">verb · <span class='ipa'>/ˈmɪtɪɡeɪt/</span> · Latin mītis, “mild, soft” · via Middle English</p>
         <p class="sense">Make it less bad, not make it gone. If you wipe it out, that is eliminate.</p>
-        <p class="ex">Extra practice can mitigate anxiety.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
+        <p class="ex">Extra practice can mitigate test anxiety, but it will not erase the feeling.</p>
+        <svg class="diagram" viewBox="0 0 340 80" width="100%" height="80" aria-hidden="true">
         <line x1="16" y1="28" x2="324" y2="28" />
         <line x1="118" y1="18" x2="118" y2="38" />
-        <line x1="214" y1="18" x2="214" y2="38" />
+        <line x1="220" y1="18" x2="220" y2="38" />
         <text x="67" y="24" text-anchor="middle">practice</text>
-        <text x="166" y="24" text-anchor="middle">can mitigate</text>
-        <text x="270" y="24" text-anchor="middle">anxiety</text>
+        <text x="168" y="24" text-anchor="middle">can mitigate</text>
+        <text x="272" y="24" text-anchor="middle">anxiety</text>
         <line x1="67" y1="28" x2="52" y2="56" />
-        <text x="40" y="68" text-anchor="start">Extra</text>
+        <text x="20" y="70" text-anchor="start">Extra</text>
+        <line x1="272" y1="28" x2="258" y2="56" />
+        <text x="248" y="70" text-anchor="start">test</text>
         </svg>
       </article>
       <article>
         <p class="num">05</p>
-        <h2>ubiquitous</h2>
-        <p class="meta">adj · Latin ubique, “everywhere” · 1800</p>
-        <p class="sense">It seems to be everywhere you look.</p>
-        <p class="ex">Coffee shops are ubiquitous downtown.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
-        <line x1="16" y1="28" x2="324" y2="28" />
-        <line x1="118" y1="18" x2="118" y2="38" />
-        <line x1="214" y1="28" x2="248" y2="50" />
-        <text x="67" y="24" text-anchor="middle">shops</text>
-        <text x="166" y="24" text-anchor="middle">are</text>
-        <text x="270" y="24" text-anchor="middle">ubiquitous</text>
-        <line x1="67" y1="28" x2="52" y2="56" />
-        <text x="40" y="68" text-anchor="start">Coffee</text>
-        <line x1="166" y1="28" x2="151" y2="56" />
-        <text x="136" y="68" text-anchor="start">downtown</text>
-        </svg>
-      </article>
-      <article>
-        <p class="num">06</p>
-        <h2>terse</h2>
-        <p class="meta">adj · Latin tersus, “wiped clean”</p>
-        <p class="sense">Short on purpose, almost clipped.</p>
-        <p class="ex">He gave a terse answer.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
-        <line x1="16" y1="28" x2="324" y2="28" />
-        <line x1="118" y1="18" x2="118" y2="38" />
-        <line x1="214" y1="18" x2="214" y2="38" />
-        <text x="67" y="24" text-anchor="middle">He</text>
-        <text x="166" y="24" text-anchor="middle">gave</text>
-        <text x="270" y="24" text-anchor="middle">answer</text>
-        <line x1="270" y1="28" x2="255" y2="56" />
-        <text x="248" y="68" text-anchor="start">a terse</text>
-        </svg>
-      </article>
-      <article>
-        <p class="num">07</p>
-        <h2>tacit</h2>
-        <p class="meta">adj · Latin tacere, “to be silent” · via French</p>
-        <p class="sense">Understood without anyone saying it.</p>
-        <p class="ex">They reached a tacit agreement.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
-        <line x1="16" y1="28" x2="324" y2="28" />
-        <line x1="118" y1="18" x2="118" y2="38" />
-        <line x1="214" y1="18" x2="214" y2="38" />
-        <text x="67" y="24" text-anchor="middle">They</text>
-        <text x="166" y="24" text-anchor="middle">reached</text>
-        <text x="270" y="24" text-anchor="middle">agreement</text>
-        <line x1="270" y1="28" x2="255" y2="56" />
-        <text x="248" y="68" text-anchor="start">a tacit</text>
-        </svg>
-      </article>
-      <article>
-        <p class="num">08</p>
-        <h2>arduous</h2>
-        <p class="meta">adj · Latin arduus, “steep, hard to reach”</p>
-        <p class="sense">Hard in a grinding way, not a single sharp shock.</p>
-        <p class="ex">The rewrite was arduous.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
-        <line x1="16" y1="28" x2="324" y2="28" />
-        <line x1="118" y1="18" x2="118" y2="38" />
-        <line x1="214" y1="28" x2="248" y2="50" />
-        <text x="67" y="24" text-anchor="middle">rewrite</text>
-        <text x="166" y="24" text-anchor="middle">was</text>
-        <text x="270" y="24" text-anchor="middle">arduous</text>
-        <line x1="67" y1="28" x2="52" y2="56" />
-        <text x="40" y="68" text-anchor="start">The</text>
-        </svg>
-      </article>
-      <article>
-        <p class="num">09</p>
         <h2>conspicuous</h2>
         <p class="meta">adj · <span class='ipa'>/kənˈspɪkjuəs/</span> · Latin conspicere, “to look at” · 1540s</p>
         <p class="sense">Easy to notice. The opposite of blending in.</p>
-        <p class="ex">The empty chair was conspicuous.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
+        <p class="ex">The empty chair at dinner was conspicuous, and nobody wanted to mention it first.</p>
+        <svg class="diagram" viewBox="0 0 340 80" width="100%" height="80" aria-hidden="true">
         <line x1="16" y1="28" x2="324" y2="28" />
         <line x1="118" y1="18" x2="118" y2="38" />
         <line x1="214" y1="28" x2="248" y2="50" />
         <text x="67" y="24" text-anchor="middle">chair</text>
         <text x="166" y="24" text-anchor="middle">was</text>
-        <text x="270" y="24" text-anchor="middle">conspicuous</text>
-        <line x1="67" y1="28" x2="52" y2="56" />
-        <text x="40" y="68" text-anchor="start">The empty</text>
-        </svg>
-      </article>
-      <article>
-        <p class="num">10</p>
-        <h2>tentative</h2>
-        <p class="meta">adj · Latin tentare, “to try” · 1580s</p>
-        <p class="sense">Not firm yet. A first try you can still take back.</p>
-        <p class="ex">We made a tentative plan.</p>
-        <svg class="diagram" viewBox="0 0 340 72" width="100%" height="72" aria-hidden="true">
-        <line x1="16" y1="28" x2="324" y2="28" />
-        <line x1="118" y1="18" x2="118" y2="38" />
-        <line x1="214" y1="18" x2="214" y2="38" />
-        <text x="67" y="24" text-anchor="middle">We</text>
-        <text x="166" y="24" text-anchor="middle">made</text>
-        <text x="270" y="24" text-anchor="middle">plan</text>
-        <line x1="270" y1="28" x2="255" y2="56" />
-        <text x="248" y="68" text-anchor="start">a tentative</text>
+        <text x="282" y="24" text-anchor="middle">conspicuous</text>
+        <line x1="67" y1="28" x2="50" y2="56" />
+        <text x="16" y="70" text-anchor="start">The empty</text>
+        <line x1="100" y1="28" x2="88" y2="56" />
+        <text x="80" y="70" text-anchor="start">at dinner</text>
         </svg>
       </article>
     <section class="check">
       <p class="kicker">Check</p>
-      <p class="q">You put a bright orange cone in the hallway so nobody misses the wet floor. Is the cone conspicuous, or ubiquitous?</p>
-      <p class="hint">Answer in the chat. One word is enough.</p>
+      <p class="q">The empty chair at dinner was easy to notice. Which word from today is that, and why is it not ephemeral?</p>
+      <p class="hint">Answer in the chat.</p>
     </section>
     <footer>Quill · for Adam</footer>
   </div>
