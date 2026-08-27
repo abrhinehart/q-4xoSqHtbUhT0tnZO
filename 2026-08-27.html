@@ -200,37 +200,20 @@
   </div>
 <script>
 (function () {
-  function enVoice() {
-    if (!window.speechSynthesis) return null;
-    var list = speechSynthesis.getVoices() || [];
-    var i;
-    for (i = 0; i < list.length; i++) {
-      if (list[i].lang === "en-US" || (list[i].lang && list[i].lang.indexOf("en-US") === 0)) return list[i];
-    }
-    for (i = 0; i < list.length; i++) {
-      if (list[i].lang && list[i].lang.indexOf("en") === 0) return list[i];
-    }
-    return null;
-  }
-  if (window.speechSynthesis) {
-    speechSynthesis.getVoices();
-    if (speechSynthesis.addEventListener) {
-      speechSynthesis.addEventListener("voiceschanged", function () { speechSynthesis.getVoices(); });
-    }
-  }
+  var current = null;
   document.addEventListener("click", function (e) {
     var btn = e.target.closest ? e.target.closest(".hear") : null;
     if (!btn) return;
     e.preventDefault();
     var word = btn.getAttribute("data-word");
-    if (!word || !window.speechSynthesis) return;
-    speechSynthesis.cancel();
-    var u = new SpeechSynthesisUtterance(word);
-    u.lang = "en-US";
-    u.rate = 0.85;
-    var v = enVoice();
-    if (v) u.voice = v;
-    speechSynthesis.speak(u);
+    if (!word) return;
+    if (current) {
+      try { current.pause(); current.currentTime = 0; } catch (err) {}
+    }
+    var a = new Audio("audio/" + encodeURIComponent(word) + ".mp3");
+    current = a;
+    var p = a.play();
+    if (p && p.catch) p.catch(function () {});
   }, false);
 })();
 </script>
