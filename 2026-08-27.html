@@ -55,8 +55,7 @@
     margin: 0;
   }
   .date { font-size: 13px; color: var(--muted); text-align: right; }
-  .lede { font-size: 17px; color: var(--muted); margin: 0 0 12px; max-width: 44ch; }
-  .key { margin: 0 0 22px; font-size: 12px; color: var(--muted); }
+  .lede { font-size: 17px; color: var(--muted); margin: 0 0 22px; max-width: 44ch; }
   article {
     background: var(--card);
     border: 1px solid rgba(36,28,20,.08);
@@ -64,17 +63,40 @@
     margin-bottom: 14px;
   }
   .num { font-size: 11px; letter-spacing: .18em; color: var(--rust); margin: 0 0 4px; }
+  .head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 0 4px;
+  }
   h2 {
     font-family: "Fraunces", Georgia, serif;
     font-weight: 620;
     font-size: 30px;
     letter-spacing: -.02em;
-    margin: 0 0 4px;
+    margin: 0;
   }
+  .hear {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--rust);
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .hear:active, .hear[aria-pressed="true"] { background: #f7efe0; }
+  .pron { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
   .meta { margin: 0 0 10px; font-size: 12px; color: var(--muted); }
   .sense { margin: 0 0 10px; font-size: 16px; }
   .ex {
-    margin: 0 0 12px;
+    margin: 0;
     font-style: italic;
     color: var(--muted);
     font-size: 16px;
@@ -82,21 +104,6 @@
     padding-left: 10px;
     border-left: 2px solid var(--rule);
   }
-  .wordrow { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 0 0 4px; }
-  .wordrow h2 { margin: 0; }
-  button.hear {
-    font-family: "Newsreader", Georgia, serif;
-    font-size: 12px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--rust);
-    background: transparent;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    padding: 4px 10px 3px;
-    cursor: pointer;
-  }
-  button.hear:active { background: rgba(154,59,36,.08); }
   .check {
     margin-top: 22px;
     padding: 20px 18px 18px;
@@ -128,57 +135,62 @@
       </div>
       <p class="date">Thursday<br>27 August 2026</p>
     </header>
-    <p class="lede">Five new ones. Tap Hear to play the word.</p>
+    <p class="lede">Five new ones. The sentence has to carry the word. Tap Hear to say it out loud.</p>
       <article>
         <p class="num">01</p>
-        <div class="wordrow">
+        <div class="head">
           <h2>garrulous</h2>
-          <button class="hear" type="button" onclick="hear('garrulous')">Hear</button>
+          <button type="button" class="hear" data-word="garrulous" aria-label="Hear garrulous">Hear</button>
         </div>
+        <p class="pron">/ˈɡɛɹ.ə.ləs/</p>
         <p class="meta">adj · Latin garrulus, “talkative” · 1610s</p>
         <p class="sense">Too ready to talk. Not just chatty: the extra story keeps coming.</p>
         <p class="ex">The garrulous driver narrated every exit from Tampa to Winter Haven, and nobody in the back seat had the heart to stop him.</p>
-</article>
+      </article>
       <article>
         <p class="num">02</p>
-        <div class="wordrow">
+        <div class="head">
           <h2>sanguine</h2>
-          <button class="hear" type="button" onclick="hear('sanguine')">Hear</button>
+          <button type="button" class="hear" data-word="sanguine" aria-label="Hear sanguine">Hear</button>
         </div>
+        <p class="pron">/ˈsæŋ.ɡwɪn/</p>
         <p class="meta">adj · Latin sanguis, “blood” · c. 1500</p>
         <p class="sense">Cheerfully sure it will work out. Old medicine blamed an excess of blood for that mood.</p>
         <p class="ex">He stayed sanguine about the refinance even after the second rate lock expired on a Friday.</p>
-</article>
+      </article>
       <article>
         <p class="num">03</p>
-        <div class="wordrow">
+        <div class="head">
           <h2>intransigent</h2>
-          <button class="hear" type="button" onclick="hear('intransigent')">Hear</button>
+          <button type="button" class="hear" data-word="intransigent" aria-label="Hear intransigent">Hear</button>
         </div>
+        <p class="pron">/ɪnˈtɹæn.sə.d͡ʒənt/</p>
         <p class="meta">adj · Spanish intransigentes, “those not coming to agreement” · 1874</p>
         <p class="sense">Will not yield. Not quiet. Unwilling to meet you in the middle.</p>
         <p class="ex">The board was intransigent on the 7 a.m. start, so the rest of the agenda never got a vote.</p>
-</article>
+      </article>
       <article>
         <p class="num">04</p>
-        <div class="wordrow">
+        <div class="head">
           <h2>quotidian</h2>
-          <button class="hear" type="button" onclick="hear('quotidian')">Hear</button>
+          <button type="button" class="hear" data-word="quotidian" aria-label="Hear quotidian">Hear</button>
         </div>
+        <p class="pron">/kwoʊˈtɪdiən/</p>
         <p class="meta">adj · Latin quotidianus, “daily” · mid-14c</p>
         <p class="sense">Ordinary because it returns every day. Small until it isn’t.</p>
         <p class="ex">The leak was a quotidian drip under the sink until the cabinet floor finally gave way.</p>
-</article>
+      </article>
       <article>
         <p class="num">05</p>
-        <div class="wordrow">
+        <div class="head">
           <h2>abrogate</h2>
-          <button class="hear" type="button" onclick="hear('abrogate')">Hear</button>
+          <button type="button" class="hear" data-word="abrogate" aria-label="Hear abrogate">Hear</button>
         </div>
+        <p class="pron">/ˈæb.ɹəˌɡeɪt/</p>
         <p class="meta">verb · Latin abrogare, “to repeal” · 1520s</p>
         <p class="sense">Cancel it by authority. Not ignore it. Kill the rule on purpose.</p>
         <p class="ex">One signature would abrogate the old noncompete, and she could start on Monday without a lawyer in the room.</p>
-</article>
+      </article>
     <section class="check">
       <p class="kicker">Check</p>
       <p class="q">Someone who holds back the extra thing is reticent. A driver who narrates every exit from Tampa to Winter Haven is something else. Which new word is that?</p>
@@ -186,24 +198,41 @@
     </section>
     <footer>Quill · for Adam</footer>
   </div>
-
 <script>
-function hear(word) {
-  if (!window.speechSynthesis) return;
-  var speak = function () {
+(function () {
+  function enVoice() {
+    if (!window.speechSynthesis) return null;
+    var list = speechSynthesis.getVoices() || [];
+    var i;
+    for (i = 0; i < list.length; i++) {
+      if (list[i].lang === "en-US" || (list[i].lang && list[i].lang.indexOf("en-US") === 0)) return list[i];
+    }
+    for (i = 0; i < list.length; i++) {
+      if (list[i].lang && list[i].lang.indexOf("en") === 0) return list[i];
+    }
+    return null;
+  }
+  if (window.speechSynthesis) {
+    speechSynthesis.getVoices();
+    if (speechSynthesis.addEventListener) {
+      speechSynthesis.addEventListener("voiceschanged", function () { speechSynthesis.getVoices(); });
+    }
+  }
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest ? e.target.closest(".hear") : null;
+    if (!btn) return;
+    e.preventDefault();
+    var word = btn.getAttribute("data-word");
+    if (!word || !window.speechSynthesis) return;
     speechSynthesis.cancel();
     var u = new SpeechSynthesisUtterance(word);
-    u.lang = 'en-US';
+    u.lang = "en-US";
     u.rate = 0.85;
-    var voices = speechSynthesis.getVoices();
-    var v = voices.filter(function (x) { return x.lang.indexOf('en-US') === 0; })[0]
-      || voices.filter(function (x) { return x.lang.indexOf('en') === 0; })[0];
+    var v = enVoice();
     if (v) u.voice = v;
     speechSynthesis.speak(u);
-  };
-  if (speechSynthesis.getVoices().length) speak();
-  else speechSynthesis.addEventListener('voiceschanged', speak, { once: true });
-}
+  }, false);
+})();
 </script>
 </body>
 </html>
