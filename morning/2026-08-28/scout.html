@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout · 28 August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f3ead8;
+  --ink: #241c14;
+  --muted: #6b5a48;
+  --rule: #c9b79a;
+  --rust: #9a3b24;
+  --card: #faf4e8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background:
+    radial-gradient(1200px 700px at 20% -10%, #f7f0e0, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(36,28,20,.015) 3px),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 40px 20px 72px; }
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(40px, 10vw, 60px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+.date { font-size: 13px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+section {
+  background: var(--card);
+  border: 1px solid rgba(36,28,20,.08);
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 22px;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+p { margin: 0 0 8px; font-size: 16px; }
+p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); }
+a { color: var(--rust); text-underline-offset: 3px; }
+.back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
+.back a { text-decoration: none; }
+.event {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,183,154,.55);
+}
+.event time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 8.2em;
+  flex-shrink: 0;
+}
+.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+.deg {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(64px, 18vw, 92px);
+  letter-spacing: -.045em;
+  line-height: .85;
+  margin: 0 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin: 6px 0 14px;
+}
+.strip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+}
+.strip span.mark {
+  background: var(--rust);
+  color: var(--card);
+  border-color: var(--rust);
+}
+.occ {
+  display: grid;
+  grid-template-columns: 4.8em 1fr;
+  gap: 2px 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+}
+.occ .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+.occ .what { margin: 0; }
+.occ .place { margin: 0; color: var(--muted); font-size: 14px; grid-column: 2; }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.tile .sym {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.tile .px {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(15px, 4.5vw, 22px);
+  letter-spacing: -.03em;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+  line-height: 1.1;
+}
+.tile .chg {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: var(--rust);
+  margin: 3px 0 0;
+}
+.tile .rng {
+  font-size: 11px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  margin: 3px 0 0;
+}
+.spark { margin: 2px -2px 6px; }
+.spark svg { display: block; width: 100%; }
+.caption { font-size: 12px; color: var(--muted); margin: 0 0 2px; }
+.story {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+}
+.story .label { margin-bottom: 6px; }
+.more { display: inline-block; margin-top: 12px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.chip {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -.01em;
+  padding: 5px 10px 6px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.check {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+}
+.deck-row { display: flex; gap: 16px; align-items: flex-start; }
+.deck-n {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 64px;
+  letter-spacing: -.05em;
+  line-height: .8;
+  color: var(--rust);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.frow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+}
+.frow:first-of-type { border-top: none; padding-top: 2px; }
+.frow .name {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 18px;
+  letter-spacing: -.02em;
+}
+.frow .chain { color: var(--muted); font-size: 13px; }
+.chip-v {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 2px 7px 3px;
+  border: 1px solid var(--ink);
+  margin-left: auto;
+}
+.chip-v.skip { border-color: var(--rust); color: var(--rust); }
+.frow .hint {
+  flex: 1 1 100%;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+section.pull {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 2px 20px;
+  margin-bottom: 14px;
+}
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 8px;
+  margin: 10px 0 8px;
+}
+.stats div { min-width: 0; }
+.stats dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.stats dd {
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+.ca {
+  display: block;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  word-break: break-all;
+  color: var(--muted);
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.mini { margin-top: 8px; }
+.mini svg { display: block; width: 100%; height: 40px; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="page">
+    <p class="back"><a href="../">Morning</a></p>
+    <header>
+      <div>
+        <p class="kicker">Winter Haven</p>
+        <h1>Scout</h1>
+      </div>
+      <p class="date">Friday<br>28 August 2026</p>
+    </header>
+
+    <section>
+      <p class="label">Majors · Yahoo Finance</p>
+      <div class="tiles">
+        <div class="tile">
+          <p class="sym">BTC</p>
+          <p class="px">$77,467.68</p>
+          <p class="chg">−3.41%</p>
+          <p class="rng">75,987–80,702</p>
+          <div class="mini"><svg viewBox="0 0 180 40" width="100%" height="40" role="img" aria-label="Seven-day price" preserveAspectRatio="none">
+  <path d="M 3.00 22.54 L 6.17 19.62 L 9.35 25.37 L 12.52 28.03 L 15.70 26.48 L 18.87 28.52 L 22.05 26.71 L 25.22 29.29 L 28.39 26.54 L 31.57 28.87 L 34.74 34.00 L 37.92 31.20 L 41.09 27.09 L 44.27 27.51 L 47.44 26.32 L 50.62 23.17 L 53.79 24.16 L 56.96 28.75 L 60.14 25.49 L 63.31 24.98 L 66.49 15.06 L 69.66 15.42 L 72.84 16.37 L 76.01 16.10 L 79.18 11.29 L 82.36 6.78 L 85.53 6.38 L 88.71 14.81 L 91.88 16.12 L 95.06 12.77 L 98.23 15.07 L 101.41 18.70 L 104.58 18.20 L 107.75 15.44 L 110.93 16.32 L 114.10 19.42 L 117.28 20.26 L 120.45 22.04 L 123.63 19.20 L 126.80 17.65 L 129.97 17.81 L 133.15 17.03 L 136.32 17.03 L 139.50 9.77 L 142.67 14.20 L 145.85 7.73 L 149.02 8.61 L 152.20 8.44 L 155.37 6.00 L 158.54 10.79 L 161.72 10.26 L 164.89 14.09 L 168.07 13.32 L 171.24 20.11 L 174.42 24.96 L 177.00 25.43 L 177.00 34.00 L 3.00 34.00 Z" fill="#9a3b24" fill-opacity="0.12"/>
+  <path d="M 3.00 22.54 L 6.17 19.62 L 9.35 25.37 L 12.52 28.03 L 15.70 26.48 L 18.87 28.52 L 22.05 26.71 L 25.22 29.29 L 28.39 26.54 L 31.57 28.87 L 34.74 34.00 L 37.92 31.20 L 41.09 27.09 L 44.27 27.51 L 47.44 26.32 L 50.62 23.17 L 53.79 24.16 L 56.96 28.75 L 60.14 25.49 L 63.31 24.98 L 66.49 15.06 L 69.66 15.42 L 72.84 16.37 L 76.01 16.10 L 79.18 11.29 L 82.36 6.78 L 85.53 6.38 L 88.71 14.81 L 91.88 16.12 L 95.06 12.77 L 98.23 15.07 L 101.41 18.70 L 104.58 18.20 L 107.75 15.44 L 110.93 16.32 L 114.10 19.42 L 117.28 20.26 L 120.45 22.04 L 123.63 19.20 L 126.80 17.65 L 129.97 17.81 L 133.15 17.03 L 136.32 17.03 L 139.50 9.77 L 142.67 14.20 L 145.85 7.73 L 149.02 8.61 L 152.20 8.44 L 155.37 6.00 L 158.54 10.79 L 161.72 10.26 L 164.89 14.09 L 168.07 13.32 L 171.24 20.11 L 174.42 24.96 L 177.00 25.43" fill="none" stroke="#9a3b24" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="177.00" cy="25.43" r="2.4" fill="#9a3b24"/>
+</svg></div>
+        </div>
+        <div class="tile">
+          <p class="sym">ETH</p>
+          <p class="px">$2,432.54</p>
+          <p class="chg">−2.90%</p>
+          <p class="rng">2,373–2,535</p>
+          <div class="mini"><svg viewBox="0 0 180 40" width="100%" height="40" role="img" aria-label="Seven-day price" preserveAspectRatio="none">
+  <path d="M 3.00 8.52 L 6.17 9.89 L 9.35 24.74 L 12.52 27.79 L 15.70 26.50 L 18.87 29.95 L 22.05 26.65 L 25.22 30.63 L 28.39 26.03 L 31.57 29.33 L 34.74 34.00 L 37.92 29.82 L 41.09 26.80 L 44.27 24.58 L 47.44 22.68 L 50.62 18.50 L 53.79 19.39 L 56.96 26.14 L 60.14 21.11 L 63.31 19.89 L 66.49 10.35 L 69.66 15.18 L 72.84 17.74 L 76.01 15.86 L 79.18 13.92 L 82.36 12.95 L 85.53 12.66 L 88.71 17.72 L 91.88 17.89 L 95.06 15.92 L 98.23 18.97 L 101.41 23.97 L 104.58 23.00 L 107.75 19.40 L 110.93 20.45 L 114.10 22.80 L 117.28 21.47 L 120.45 22.32 L 123.63 17.90 L 126.80 13.29 L 129.97 14.26 L 133.15 14.14 L 136.32 14.09 L 139.50 6.00 L 142.67 13.61 L 145.85 8.45 L 149.02 11.32 L 152.20 11.73 L 155.37 9.61 L 158.54 14.50 L 161.72 12.02 L 164.89 14.61 L 168.07 12.91 L 171.24 18.09 L 174.42 26.56 L 177.00 25.70 L 177.00 34.00 L 3.00 34.00 Z" fill="#9a3b24" fill-opacity="0.12"/>
+  <path d="M 3.00 8.52 L 6.17 9.89 L 9.35 24.74 L 12.52 27.79 L 15.70 26.50 L 18.87 29.95 L 22.05 26.65 L 25.22 30.63 L 28.39 26.03 L 31.57 29.33 L 34.74 34.00 L 37.92 29.82 L 41.09 26.80 L 44.27 24.58 L 47.44 22.68 L 50.62 18.50 L 53.79 19.39 L 56.96 26.14 L 60.14 21.11 L 63.31 19.89 L 66.49 10.35 L 69.66 15.18 L 72.84 17.74 L 76.01 15.86 L 79.18 13.92 L 82.36 12.95 L 85.53 12.66 L 88.71 17.72 L 91.88 17.89 L 95.06 15.92 L 98.23 18.97 L 101.41 23.97 L 104.58 23.00 L 107.75 19.40 L 110.93 20.45 L 114.10 22.80 L 117.28 21.47 L 120.45 22.32 L 123.63 17.90 L 126.80 13.29 L 129.97 14.26 L 133.15 14.14 L 136.32 14.09 L 139.50 6.00 L 142.67 13.61 L 145.85 8.45 L 149.02 11.32 L 152.20 11.73 L 155.37 9.61 L 158.54 14.50 L 161.72 12.02 L 164.89 14.61 L 168.07 12.91 L 171.24 18.09 L 174.42 26.56 L 177.00 25.70" fill="none" stroke="#9a3b24" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="177.00" cy="25.70" r="2.4" fill="#9a3b24"/>
+</svg></div>
+        </div>
+        <div class="tile">
+          <p class="sym">SOL</p>
+          <p class="px">$103.56</p>
+          <p class="chg">−4.79%</p>
+          <p class="rng">92.23–109.42</p>
+          <div class="mini"><svg viewBox="0 0 180 40" width="100%" height="40" role="img" aria-label="Seven-day price" preserveAspectRatio="none">
+  <path d="M 3.00 31.29 L 6.17 26.50 L 9.35 30.62 L 12.52 31.27 L 15.70 31.37 L 18.87 32.61 L 22.05 30.33 L 25.22 33.02 L 28.39 27.22 L 31.57 31.57 L 34.74 34.00 L 37.92 32.21 L 41.09 30.13 L 44.27 28.87 L 47.44 28.95 L 50.62 28.84 L 53.79 28.52 L 56.96 31.63 L 60.14 30.18 L 63.31 30.00 L 66.49 27.33 L 69.66 27.05 L 72.84 27.91 L 76.01 25.33 L 79.18 18.25 L 82.36 18.49 L 85.53 19.95 L 88.71 21.49 L 91.88 23.48 L 95.06 23.82 L 98.23 23.61 L 101.41 25.83 L 104.58 26.70 L 107.75 26.04 L 110.93 26.44 L 114.10 27.46 L 117.28 26.11 L 120.45 27.86 L 123.63 26.39 L 126.80 24.00 L 129.97 20.12 L 133.15 19.40 L 136.32 19.01 L 139.50 13.88 L 142.67 13.83 L 145.85 9.19 L 149.02 7.27 L 152.20 6.63 L 155.37 6.00 L 158.54 9.76 L 161.72 8.61 L 164.89 11.28 L 168.07 13.03 L 171.24 12.39 L 174.42 16.14 L 177.00 15.25 L 177.00 34.00 L 3.00 34.00 Z" fill="#9a3b24" fill-opacity="0.12"/>
+  <path d="M 3.00 31.29 L 6.17 26.50 L 9.35 30.62 L 12.52 31.27 L 15.70 31.37 L 18.87 32.61 L 22.05 30.33 L 25.22 33.02 L 28.39 27.22 L 31.57 31.57 L 34.74 34.00 L 37.92 32.21 L 41.09 30.13 L 44.27 28.87 L 47.44 28.95 L 50.62 28.84 L 53.79 28.52 L 56.96 31.63 L 60.14 30.18 L 63.31 30.00 L 66.49 27.33 L 69.66 27.05 L 72.84 27.91 L 76.01 25.33 L 79.18 18.25 L 82.36 18.49 L 85.53 19.95 L 88.71 21.49 L 91.88 23.48 L 95.06 23.82 L 98.23 23.61 L 101.41 25.83 L 104.58 26.70 L 107.75 26.04 L 110.93 26.44 L 114.10 27.46 L 117.28 26.11 L 120.45 27.86 L 123.63 26.39 L 126.80 24.00 L 129.97 20.12 L 133.15 19.40 L 136.32 19.01 L 139.50 13.88 L 142.67 13.83 L 145.85 9.19 L 149.02 7.27 L 152.20 6.63 L 155.37 6.00 L 158.54 9.76 L 161.72 8.61 L 164.89 11.28 L 168.07 13.03 L 171.24 12.39 L 174.42 16.14 L 177.00 15.25" fill="none" stroke="#9a3b24" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="177.00" cy="15.25" r="2.4" fill="#9a3b24"/>
+</svg></div>
+        </div>
+      </div>
+      <div class="spark"><svg viewBox="0 0 600 78" width="100%" height="78" role="img" aria-label="Seven-day price" preserveAspectRatio="none">
+  <path d="M 3.00 44.61 L 13.84 38.17 L 24.67 50.90 L 35.51 56.79 L 46.35 53.34 L 57.18 57.87 L 68.02 53.86 L 78.86 59.57 L 89.69 53.49 L 100.53 58.64 L 111.37 70.00 L 122.20 63.79 L 133.04 54.69 L 143.88 55.63 L 154.71 52.99 L 165.55 46.01 L 176.39 48.22 L 187.22 58.38 L 198.06 51.15 L 208.90 50.02 L 219.73 28.06 L 230.57 28.85 L 241.41 30.96 L 252.24 30.36 L 263.08 19.71 L 273.92 9.74 L 284.75 8.84 L 295.59 27.50 L 306.43 30.40 L 317.26 22.98 L 328.10 28.08 L 338.94 36.13 L 349.77 35.01 L 360.61 28.91 L 371.44 30.86 L 382.28 37.72 L 393.12 39.58 L 403.95 43.52 L 414.79 37.22 L 425.63 33.79 L 436.46 34.14 L 447.30 32.41 L 458.14 32.42 L 468.97 16.34 L 479.81 26.15 L 490.65 11.83 L 501.48 13.79 L 512.32 13.41 L 523.16 8.00 L 533.99 18.60 L 544.83 17.44 L 555.67 25.92 L 566.50 24.20 L 577.34 39.25 L 588.18 49.99 L 597.00 51.03 L 597.00 70.00 L 3.00 70.00 Z" fill="#9a3b24" fill-opacity="0.12"/>
+  <path d="M 3.00 44.61 L 13.84 38.17 L 24.67 50.90 L 35.51 56.79 L 46.35 53.34 L 57.18 57.87 L 68.02 53.86 L 78.86 59.57 L 89.69 53.49 L 100.53 58.64 L 111.37 70.00 L 122.20 63.79 L 133.04 54.69 L 143.88 55.63 L 154.71 52.99 L 165.55 46.01 L 176.39 48.22 L 187.22 58.38 L 198.06 51.15 L 208.90 50.02 L 219.73 28.06 L 230.57 28.85 L 241.41 30.96 L 252.24 30.36 L 263.08 19.71 L 273.92 9.74 L 284.75 8.84 L 295.59 27.50 L 306.43 30.40 L 317.26 22.98 L 328.10 28.08 L 338.94 36.13 L 349.77 35.01 L 360.61 28.91 L 371.44 30.86 L 382.28 37.72 L 393.12 39.58 L 403.95 43.52 L 414.79 37.22 L 425.63 33.79 L 436.46 34.14 L 447.30 32.41 L 458.14 32.42 L 468.97 16.34 L 479.81 26.15 L 490.65 11.83 L 501.48 13.79 L 512.32 13.41 L 523.16 8.00 L 533.99 18.60 L 544.83 17.44 L 555.67 25.92 L 566.50 24.20 L 577.34 39.25 L 588.18 49.99 L 597.00 51.03" fill="none" stroke="#9a3b24" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="3" y1="25.23" x2="597" y2="25.23" stroke="#6b5a48" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.7"/><circle cx="597.00" cy="51.03" r="2.4" fill="#9a3b24"/>
+</svg></div>
+      <p class="caption">BTC 7-day, Yahoo Finance, ~4:25 PM ET. Dashed line is the 7am CoinGecko print at $79,343 (−0.3%). Not the same snapshot as this series. At 7am SOL was leading the 24h; this tape has SOL −4.79%.</p>
+    </section>
+
+    <section>
+      <p class="label">Spot bitcoin ETFs · Aug 27</p>
+      <p class="muted" style="margin-bottom:8px">Net inflow $242M · ninth straight day · prior session $232M</p>
+      <svg viewBox="0 0 580 92" width="100%" height="92" role="img" aria-label="Spot bitcoin ETF flows Aug 27">
+<text x="0" y="19" fill="#241c14" font-size="12" font-family="Newsreader, Georgia, serif">IBIT</text>
+<line x1="72" y1="15" x2="432" y2="15" stroke="#c9b79a" stroke-width="1"/>
+<rect x="155.54" y="8" width="276.46" height="14" fill="#241c14" fill-opacity="0.85"/>
+<line x1="155.54" y1="6" x2="155.54" y2="24" stroke="#6b5a48" stroke-width="1"/>
+<text x="580" y="19" text-anchor="end" fill="#241c14" font-size="12" font-family="Newsreader, Georgia, serif" font-variant="tabular-nums">+$278M</text>
+<text x="0" y="47" fill="#241c14" font-size="12" font-family="Newsreader, Georgia, serif">FBTC</text>
+<line x1="72" y1="43" x2="432" y2="43" stroke="#c9b79a" stroke-width="1"/>
+<rect x="72.00" y="36" width="83.54" height="14" fill="#9a3b24" fill-opacity="0.85"/>
+<line x1="155.54" y1="34" x2="155.54" y2="52" stroke="#6b5a48" stroke-width="1"/>
+<text x="580" y="47" text-anchor="end" fill="#9a3b24" font-size="12" font-family="Newsreader, Georgia, serif" font-variant="tabular-nums">−$84M</text>
+<text x="0" y="75" fill="#241c14" font-size="12" font-family="Newsreader, Georgia, serif">GBTC</text>
+<line x1="72" y1="71" x2="432" y2="71" stroke="#c9b79a" stroke-width="1"/>
+<rect x="128.69" y="64" width="26.85" height="14" fill="#9a3b24" fill-opacity="0.85"/>
+<line x1="155.54" y1="62" x2="155.54" y2="80" stroke="#6b5a48" stroke-width="1"/>
+<text x="580" y="75" text-anchor="end" fill="#9a3b24" font-size="12" font-family="Newsreader, Georgia, serif" font-variant="tabular-nums">−$27M</text>
+</svg>
+      <p class="caption">SoSoValue via TFTC. Ink is inflow, rust is outflow.</p>
+    </section>
+
+    <section>
+      <div class="story" style="margin-top:0;padding-top:0;border-top:none">
+        <p class="label">Ninth day</p>
+        <p>Spot bitcoin ETFs took $242M net on Aug 27 — the ninth straight session. Aug 26 was $232M. IBIT carried it; FBTC and GBTC leaked. Flows still bid. The afternoon tape is not.</p>
+      </div>
+      <div class="story">
+        <p class="label">After the reclaim</p>
+        <p>Thursday tagged intraday highs near $81k and took back $80k. Overnight went soft. Into the 7am Scout drop, majors were holding mid-$79k and SOL was leading the 24h.</p>
+        <p>That print is closed. This chart is Yahoo’s afternoon series, not the 7am CoinGecko tape.</p>
+      </div>
+      <div class="story">
+        <p class="label">Warsh</p>
+        <p>Fed Chair Kevin Warsh’s Jackson Hole keynote sat at ~10:00 AM ET, his 100th day, titled “In Our Time.” Kansas City Fed symposium runs Aug 27–29.</p>
+        <p>He treated forward guidance as a tool that had finished its work, left 2% as a firm PCE target, and called inflation the unfinished business — 3.7% on twelve months. Not a rate path. A principles speech. The tape had already given back Thursday’s reclaim before he spoke.</p>
+      </div>
+      <div class="story">
+        <p class="label">SEC</p>
+        <p>Regulation Crypto Assets (S7-2026-27) is still in comment. The window runs through October 20. Not a today event. A clock that has been ticking.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
