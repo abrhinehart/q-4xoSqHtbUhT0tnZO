@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Morning · 30 August 2026</title>
+<title>Morning · 31 August 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -82,6 +82,23 @@ p:last-child { margin-bottom: 0; }
 a { color: var(--rust); text-underline-offset: 3px; }
 .back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
 .back a { text-decoration: none; }
+.event {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,183,154,.55);
+}
+.event time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 8.2em;
+  flex-shrink: 0;
+}
+.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
 .deg {
   font-family: "Fraunces", Georgia, serif;
   font-weight: 620;
@@ -150,6 +167,17 @@ a { color: var(--rust); text-underline-offset: 3px; }
   font-size: 16px;
 }
 .links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 4px; font-size: 15px; }
+.deck-row { display: flex; gap: 16px; align-items: flex-start; }
+.deck-n {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 64px;
+  letter-spacing: -.05em;
+  line-height: .8;
+  color: var(--rust);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
 section.pull {
   background: transparent;
   border: none;
@@ -169,20 +197,27 @@ footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
         <p class="kicker">Winter Haven</p>
         <h1>Morning</h1>
       </div>
-      <p class="date">Sunday<br>30 August 2026</p>
+      <p class="date">Monday<br>31 August 2026</p>
     </header>
 
     <section>
+      <p class="label">Calendar</p>
+      <p class="event"><time>12:00–1:00 PM</time> Swim</p>
+      <p class="event"><time>5:00–7:00 PM</time> Lift at Erik’s <span class="muted">Erik’s house</span></p>
+    </section>
+
+    <section>
       <p class="label">Weather · NWS / KGIF</p>
-      <p class="deg">91°</p>
+      <p class="deg">92°</p>
       <h2>Mostly sunny, then storms</h2>
-      <p>Mostly sunny this morning, then scattered showers and thunderstorms after 1 PM (about 70%). East wind 2 to 8 mph. High near 91, easing toward the mid-80s by afternoon.</p>
+      <p>Mostly sunny this morning, then scattered showers and thunderstorms between 1 and 5 PM (about 60%). Northeast wind 1 to 6 mph. High near 92, easing toward the mid-80s by afternoon. Tonight: partly cloudy, low around 74.</p>
+      <p class="note">Noon swim: 89°, mostly sunny, about 10% rain in the hour. Isolated storms start after 1. Lightning risk is low for 12–1. Full go/caution at 10:40.</p>
     </section>
 
     <section>
       <p class="label">This week</p>
       <div class="strip" aria-label="Week of 30 August to 5 September">
-        <span class="today">S</span><span>M</span><span>T</span><span>W</span><span class="mark">T</span><span>F</span><span>S</span>
+        <span>S</span><span class="today">M</span><span>T</span><span>W</span><span class="mark">T</span><span>F</span><span>S</span>
       </div>
       <div class="occ">
         <div class="when">Thu 3</div>
@@ -190,40 +225,51 @@ footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
         <p class="place">2:00 PM</p>
       </div>
       <p class="muted" style="margin-top:12px;font-size:14px;">Quiet social week after birthday weekend. Haircut with Jessica is Tuesday afternoon (calendar, not here).</p>
-      <a class="more" href="2026-08-30/week.html">The week →</a>
+      <a class="more" href="2026-08-31/week.html">The week →</a>
     </section>
 
     <section>
       <p class="label">Quill · Five words</p>
       <div class="chips">
-        <span class="chip">erudite</span>
-        <span class="chip">capricious</span>
-        <span class="chip">magnanimous</span>
-        <span class="chip">desultory</span>
-        <span class="chip">feckless</span>
+        <span class="chip">obdurate</span>
+        <span class="chip">specious</span>
+        <span class="chip">mollify</span>
+        <span class="chip">ubiquitous</span>
+        <span class="chip">panacea</span>
       </div>
       <p class="links">
         <a href="https://abrhinehart.github.io/q-4xoSqHtbUhT0tnZO/">Open the lesson</a>
-        <a href="https://abrhinehart.github.io/q-4xoSqHtbUhT0tnZO/weekly.html">Weekly test</a>
       </p>
-      <p class="check">Someone who checks the edges before they step is circumspect. Someone who changes the plan because a mood did is which new word?</p>
+      <p class="check">A stated reason that may or may not be the real one is ostensible. An argument that sounds airtight but is actually false is which new word?</p>
+    </section>
+
+    <section>
+      <p class="label">Deck</p>
+      <div class="deck-row">
+        <p class="deck-n">3</p>
+        <div>
+          <h2>Days since Friday’s ~400 yd.</h2>
+          <p>Lift at Erik’s, 5–7.</p>
+          <p class="muted">Caps still two and straps out. Restock still open.</p>
+        </div>
+      </div>
     </section>
 
     <section class="pull">
       <p class="label">Verse</p>
-      <p class="verse">“Consequently, you are no longer foreigners and strangers, but fellow citizens with God’s people and also members of his household,”</p>
-      <p class="muted">Ephesians 2:19 · NIV · Bible Gateway Verse of the Day</p>
+      <p class="verse">“Come, let us bow down in worship, let us kneel before the Lord our Maker; for he is our God and we are the people of his pasture, the flock under his care. Today, if only you would hear his voice,”</p>
+      <p class="muted">Psalm 95:6-7 · NIV · Bible Gateway Verse of the Day</p>
     </section>
 
     <section>
       <p class="label">Astrology · Virgo</p>
-      <h2>Two days out</h2>
-      <p>The sun is still in your sign, two days past the birthday. The moon is a waning gibbous (about 94% lit), so the sky is still bright but the full-moon rush is already backing off.</p>
-      <p>Today the moon sits in Aries, which in human terms is a little restless and ready to start something. Sunday calendar is empty, so that energy has nowhere loud to go. Good day for the weekly vocab test and a slow walk before the afternoon storms, not for inventing a new project.</p>
-      <p>Leftover birthday glow is for reading and coffee. Save the Aries kick for Monday's swim.</p>
+      <h2>Three days out</h2>
+      <p>The sun is still in your sign, three days past the birthday. The full moon that sat on Friday has already started to shrink (waning gibbous, about 88% lit), so the sky is still bright but the peak is over.</p>
+      <p>Today the moon sits in Aries, which in human terms is a little impatient and ready to start the week. Fine for the noon swim while it is still mostly sunny. Save the actual push for Erik’s at 5, not for inventing a new project before lunch.</p>
+      <p>Storms wait until after 1. Birthday glow is still legal if you want it.</p>
     </section>
 
-    <footer>Answer the daily check and the weekly test in this chat.</footer>
+    <footer>Answer the vocab check in this chat.</footer>
   </div>
 </body>
 </html>
