@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Morning · 31 August 2026</title>
+<title>Morning · 1 September 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -187,6 +187,78 @@ section.pull {
   margin-bottom: 14px;
 }
 .verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.tile {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 10px 10px 8px;
+}
+.tile .sym {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.tile .px {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 18px;
+  letter-spacing: -.02em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg.up { color: #2f5d3a; }
+.tile .chg.down { color: var(--rust); }
+.spark { margin: 2px -2px 6px; }
+.spark svg { display: block; width: 100%; }
+.caption { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.story { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.story .label { margin-bottom: 4px; }
+.story p { font-size: 15px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 8px;
+  margin: 10px 0 8px;
+}
+.stats dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.stats dd {
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+.flow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  font-size: 14px;
+  margin: 8px 0 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.flow .k { color: var(--muted); }
+.flow .v { font-variant-numeric: tabular-nums; text-align: right; }
 footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
 </style>
 </head>
@@ -197,59 +269,95 @@ footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
         <p class="kicker">Winter Haven</p>
         <h1>Morning</h1>
       </div>
-      <p class="date">Monday<br>31 August 2026</p>
+      <p class="date">Tuesday<br>1 September 2026</p>
     </header>
 
     <section>
       <p class="label">Calendar</p>
       <p class="event"><time>12:00–1:00 PM</time> Swim</p>
-      <p class="event"><time>5:00–7:00 PM</time> Lift at Erik’s <span class="muted">Erik’s house</span></p>
+      <p class="event"><time>4:45–5:15 PM</time> Haircut with Jessica <span class="muted">150 S Fifth St, Eagle Lake</span></p>
     </section>
 
     <section>
       <p class="label">Weather · NWS / KGIF</p>
-      <p class="deg">92°</p>
+      <p class="deg">91°</p>
       <h2>Mostly sunny, then storms</h2>
-      <p>Mostly sunny this morning, then scattered showers and thunderstorms between 1 and 5 PM (about 60%). Northeast wind 1 to 6 mph. High near 92, easing toward the mid-80s by afternoon. Tonight: partly cloudy, low around 74.</p>
-      <p class="note">Noon swim: 89°, mostly sunny, about 10% rain in the hour. Isolated storms start after 1. Lightning risk is low for 12–1. Full go/caution at 10:40.</p>
+      <p>Mostly sunny this morning, then isolated showers and thunderstorms around noon, building into a broader chance later. Northeast wind 2 to 7 mph. High near 91, easing into the low-80s by afternoon. Tonight: widespread storms early, then mostly cloudy, low around 74.</p>
+      <p class="note">Noon swim: about 88°, isolated showers and thunderstorms in the hour (~20% chance at noon, rising after). Lightning risk is real for 12–1 even if the sky still looks mostly sunny. Full go/caution at 10:40.</p>
     </section>
 
     <section>
       <p class="label">This week</p>
       <div class="strip" aria-label="Week of 30 August to 5 September">
-        <span>S</span><span class="today">M</span><span>T</span><span>W</span><span class="mark">T</span><span>F</span><span>S</span>
+        <span>S</span><span>M</span><span class="today">T</span><span>W</span><span class="mark">T</span><span>F</span><span>S</span>
       </div>
       <div class="occ">
         <div class="when">Thu 3</div>
         <p class="what">Daphne speech therapy</p>
         <p class="place">2:00 PM</p>
       </div>
-      <p class="muted" style="margin-top:12px;font-size:14px;">Quiet social week after birthday weekend. Haircut with Jessica is Tuesday afternoon (calendar, not here).</p>
-      <a class="more" href="2026-08-31/week.html">The week →</a>
+      <p class="muted" style="margin-top:12px;font-size:14px;">Quiet social week after birthday weekend. Haircut with Jessica is this afternoon (calendar, not here). First-Wednesday drone block is tomorrow.</p>
+      <a class="more" href="2026-09-01/week.html">The week →</a>
     </section>
 
     <section>
       <p class="label">Quill · Five words</p>
       <div class="chips">
-        <span class="chip">obdurate</span>
-        <span class="chip">specious</span>
-        <span class="chip">mollify</span>
-        <span class="chip">ubiquitous</span>
-        <span class="chip">panacea</span>
+        <span class="chip">recalcitrant</span>
+        <span class="chip">perspicacious</span>
+        <span class="chip">assiduous</span>
+        <span class="chip">paucity</span>
+        <span class="chip">solicitous</span>
       </div>
       <p class="links">
         <a href="https://abrhinehart.github.io/q-4xoSqHtbUhT0tnZO/">Open the lesson</a>
       </p>
-      <p class="check">A stated reason that may or may not be the real one is ostensible. An argument that sounds airtight but is actually false is which new word?</p>
+      <p class="check">Yesterday’s obdurate was unmoved by soft appeals. Someone who actively digs in against orders and kicks back is which new word?</p>
+    </section>
+
+    <section>
+      <p class="label">Scout · Tape</p>
+      <div class="tiles">
+        <div class="tile">
+          <p class="sym">BTC</p>
+          <p class="px">$77,913</p>
+          <p class="chg down">−0.47%</p>
+        </div>
+        <div class="tile">
+          <p class="sym">ETH</p>
+          <p class="px">$2,454</p>
+          <p class="chg up">+0.34%</p>
+        </div>
+        <div class="tile">
+          <p class="sym">SOL</p>
+          <p class="px">$102.13</p>
+          <p class="chg down">−1.20%</p>
+        </div>
+      </div>
+      <div class="spark"><svg viewBox="0 0 600 78" width="100%" height="78" role="img" aria-label="Seven-day BTC" preserveAspectRatio="none">
+  <path d="M 4.00 37.25 L 102.67 4.00 L 201.33 69.60 L 300.00 58.37 L 398.67 74.00 L 497.33 50.19 L 596.00 67.36 L 596.00 74.00 L 4.00 74.00 Z" fill="#9a3b24" fill-opacity="0.12"/>
+  <path d="M 4.00 37.25 L 102.67 4.00 L 201.33 69.60 L 300.00 58.37 L 398.67 74.00 L 497.33 50.19 L 596.00 67.36" fill="none" stroke="#9a3b24" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="596.00" cy="67.36" r="2.4" fill="#9a3b24"/>
+</svg></div>
+      <p class="caption">7-day BTC · CoinGecko · ~7:27 AM ET</p>
+      <div class="story">
+        <p class="label">Strategy</p>
+        <p>Strategy Inc. filed an 8-K confirming the first bitcoin buy since June: 4,603 BTC for $369.7m (avg $80,318), holdings now 845,050 BTC.</p>
+      </div>
+      <div class="story">
+        <p class="label">Fed / Warsh</p>
+        <p>Warsh’s Jackson Hole hawkishness still sets the tape: September hike odds up, Friday’s jobs print the last big labor read before FOMC. Spot BTC ETFs flipped back to net inflows Monday.</p>
+      </div>
+      <a class="more" href="2026-09-01/scout.html">Open tape →</a>
     </section>
 
     <section>
       <p class="label">Deck</p>
       <div class="deck-row">
-        <p class="deck-n">3</p>
+        <p class="deck-n">300</p>
         <div>
-          <h2>Days since Friday’s ~400 yd.</h2>
-          <p>Lift at Erik’s, 5–7.</p>
+          <h2>Meters yesterday</h2>
+          <p>150 back / 150 free, ended IM.</p>
           <p class="muted">Caps still two and straps out. Restock still open.</p>
         </div>
       </div>
@@ -257,16 +365,16 @@ footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
 
     <section class="pull">
       <p class="label">Verse</p>
-      <p class="verse">“Come, let us bow down in worship, let us kneel before the Lord our Maker; for he is our God and we are the people of his pasture, the flock under his care. Today, if only you would hear his voice,”</p>
-      <p class="muted">Psalm 95:6-7 · NIV · Bible Gateway Verse of the Day</p>
+      <p class="verse">“Start children off on the way they should go, and even when they are old they will not turn from it.”</p>
+      <p class="muted">Proverbs 22:6 · NIV · Bible Gateway Verse of the Day</p>
     </section>
 
     <section>
       <p class="label">Astrology · Virgo</p>
-      <h2>Three days out</h2>
-      <p>The sun is still in your sign, three days past the birthday. The full moon that sat on Friday has already started to shrink (waning gibbous, about 88% lit), so the sky is still bright but the peak is over.</p>
-      <p>Today the moon sits in Aries, which in human terms is a little impatient and ready to start the week. Fine for the noon swim while it is still mostly sunny. Save the actual push for Erik’s at 5, not for inventing a new project before lunch.</p>
-      <p>Storms wait until after 1. Birthday glow is still legal if you want it.</p>
+      <h2>Four days out</h2>
+      <p>The sun is still in your sign, four days past the birthday. September just flipped the calendar, but the birthday glow has not fully worn off yet.</p>
+      <p>Today is practical Virgo weather: noon swim with one eye on the sky, then a haircut with Jessica in Eagle Lake at 4:45. Keep the afternoon simple. Storms are the afternoon’s main plot twist, not a new project.</p>
+      <p>If the birthday weekend still wants a little leftover shine, let the haircut be it.</p>
     </section>
 
     <footer>Answer the vocab check in this chat.</footer>
