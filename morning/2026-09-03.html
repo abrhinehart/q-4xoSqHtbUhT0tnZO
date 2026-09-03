@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning · 3 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --paper: #f3ead8;
+  --ink: #241c14;
+  --muted: #6b5a48;
+  --rule: #c9b79a;
+  --rust: #9a3b24;
+  --card: #faf4e8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background:
+    radial-gradient(1200px 700px at 20% -10%, #f7f0e0, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(36,28,20,.015) 3px),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 40px 20px 72px; }
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(40px, 10vw, 60px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+.date { font-size: 13px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+section {
+  background: var(--card);
+  border: 1px solid rgba(36,28,20,.08);
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 22px;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+p { margin: 0 0 8px; font-size: 16px; }
+p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); }
+a { color: var(--rust); text-underline-offset: 3px; }
+.back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
+.back a { text-decoration: none; }
+.event {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,183,154,.55);
+}
+.event time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 8.2em;
+  flex-shrink: 0;
+}
+.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+.deg {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(64px, 18vw, 92px);
+  letter-spacing: -.045em;
+  line-height: .85;
+  margin: 0 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin: 6px 0 14px;
+}
+.strip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+}
+.strip span.mark {
+  background: var(--rust);
+  color: var(--card);
+  border-color: var(--rust);
+}
+.strip span.today {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+.occ {
+  display: grid;
+  grid-template-columns: 4.8em 1fr;
+  gap: 2px 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+}
+.occ .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+.occ .what { margin: 0; }
+.occ .place { margin: 0; color: var(--muted); font-size: 14px; grid-column: 2; }
+.more { display: inline-block; margin-top: 12px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.chip {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -.01em;
+  padding: 5px 10px 6px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.check {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+}
+.links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 4px; font-size: 15px; }
+.deck-row { display: flex; gap: 16px; align-items: flex-start; }
+.deck-n {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 64px;
+  letter-spacing: -.05em;
+  line-height: .8;
+  color: var(--rust);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+section.pull {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 2px 20px;
+  margin-bottom: 14px;
+}
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.tile {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 10px 10px 8px;
+}
+.tile .sym {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.tile .px {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 18px;
+  letter-spacing: -.02em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg.up { color: #2f5d3a; }
+.tile .chg.down { color: var(--rust); }
+.spark { margin: 2px -2px 6px; }
+.spark svg { display: block; width: 100%; }
+.caption { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.story { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.story .label { margin-bottom: 4px; }
+.story p { font-size: 15px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 8px;
+  margin: 10px 0 8px;
+}
+.stats dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.stats dd {
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+.flow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  font-size: 14px;
+  margin: 8px 0 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.flow .k { color: var(--muted); }
+.flow .v { font-variant-numeric: tabular-nums; text-align: right; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <p class="kicker">Winter Haven</p>
+        <h1>Morning</h1>
+      </div>
+      <p class="date">Thursday<br>3 September 2026</p>
+    </header>
+
+    <section>
+      <p class="label">Calendar</p>
+      <p class="event"><time>12:00–1:00 PM</time> Swim</p>
+      <p class="event"><time>2:00–2:30 PM</time> Daphne speech therapy</p>
+      <p class="note">Hour between swim and speech — room enough if the pool runs long.</p>
+    </section>
+
+    <section>
+      <p class="label">Weather · NWS / KGIF</p>
+      <p class="deg">91°</p>
+      <h2>Partly sunny, then storms</h2>
+      <p>Partly sunny this morning. Scattered showers and thunderstorms between noon and 3pm, then widespread. ESE wind 2 to 7 mph. High near 91, temperatures falling toward the low-80s afternoon. Tonight storms early then partly cloudy, low around 74. PoP ~80% today.</p>
+      <p class="note">Noon swim (12–1): air ~88°F, isolated storms (~17% PoP at noon, rising after). Lightning risk still low in the hour itself; cells thicken mid-afternoon. Full go/caution/no-go at the 10:40 swim brief.</p>
+    </section>
+
+    <section>
+      <p class="label">This week</p>
+      <div class="strip" aria-label="Week of 30 August to 5 September">
+        <span>S</span><span>M</span><span>T</span><span>W</span><span class="mark today">T</span><span>F</span><span>S</span>
+      </div>
+      <div class="occ">
+        <div class="when">Thu 3</div>
+        <p class="what">Daphne speech therapy</p>
+        <p class="place">2:00 PM</p>
+      </div>
+      <p class="muted" style="margin-top:12px;font-size:14px;">Quiet social week. No birthdays or anniversaries on the calendar.</p>
+      <a class="more" href="2026-09-03/week.html">The week →</a>
+    </section>
+
+    <section>
+      <p class="label">Quill</p>
+      <div class="chips">
+        <span class="chip">ambivalent</span>
+        <span class="chip">egregious</span>
+        <span class="chip">iconoclast</span>
+        <span class="chip">precipitous</span>
+        <span class="chip">temerity</span>
+      </div>
+      <div class="links">
+        <a href="https://abrhinehart.github.io/q-4xoSqHtbUhT0tnZO/">Today’s lesson</a>
+      </div>
+      <div class="check">
+        <p>Yesterday’s <em>truculent</em> was eager to fight people in the room. Someone who attacks cherished beliefs or institutions themselves is which new word?</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="label">Scout · Tape</p>
+      <div class="tiles">
+        <div class="tile">
+          <p class="sym">BTC</p>
+          <p class="px">$77,714</p>
+          <p class="chg up">+1.45%</p>
+        </div>
+        <div class="tile">
+          <p class="sym">ETH</p>
+          <p class="px">$2,396</p>
+          <p class="chg up">+1.00%</p>
+        </div>
+        <div class="tile">
+          <p class="sym">SOL</p>
+          <p class="px">$100.32</p>
+          <p class="chg up">+2.61%</p>
+        </div>
+      </div>
+      <div class="spark"><svg viewBox="0 0 600 78" width="100%" height="78" role="img" aria-label="Seven-day BTC" preserveAspectRatio="none">
+  <path d="M 4.00 4.00 L 16.60 17.89 L 29.19 20.41 L 41.79 22.50 L 54.38 23.91 L 66.98 52.56 L 79.57 61.58 L 92.17 53.68 L 104.77 59.76 L 117.36 60.50 L 129.96 57.22 L 142.55 56.31 L 155.15 50.44 L 167.74 47.28 L 180.34 46.77 L 192.94 49.01 L 205.53 48.27 L 218.13 49.60 L 230.72 37.31 L 243.32 35.96 L 255.91 32.24 L 268.51 43.09 L 281.11 57.40 L 293.70 57.91 L 306.30 42.48 L 318.89 45.60 L 331.49 40.88 L 344.09 32.68 L 356.68 33.74 L 369.28 39.45 L 381.87 38.07 L 394.47 39.78 L 407.06 50.97 L 419.66 48.25 L 432.26 64.50 L 444.85 61.52 L 457.45 61.61 L 470.04 59.56 L 482.64 58.45 L 495.23 74.00 L 507.83 66.76 L 520.43 66.27 L 533.02 62.94 L 545.62 63.10 L 558.21 54.61 L 570.81 54.72 L 583.40 58.50 L 596.00 54.85 L 596.00 74.00 L 4.00 74.00 Z" fill="#9a3b24" fill-opacity="0.12"/>
+  <path d="M 4.00 4.00 L 16.60 17.89 L 29.19 20.41 L 41.79 22.50 L 54.38 23.91 L 66.98 52.56 L 79.57 61.58 L 92.17 53.68 L 104.77 59.76 L 117.36 60.50 L 129.96 57.22 L 142.55 56.31 L 155.15 50.44 L 167.74 47.28 L 180.34 46.77 L 192.94 49.01 L 205.53 48.27 L 218.13 49.60 L 230.72 37.31 L 243.32 35.96 L 255.91 32.24 L 268.51 43.09 L 281.11 57.40 L 293.70 57.91 L 306.30 42.48 L 318.89 45.60 L 331.49 40.88 L 344.09 32.68 L 356.68 33.74 L 369.28 39.45 L 381.87 38.07 L 394.47 39.78 L 407.06 50.97 L 419.66 48.25 L 432.26 64.50 L 444.85 61.52 L 457.45 61.61 L 470.04 59.56 L 482.64 58.45 L 495.23 74.00 L 507.83 66.76 L 520.43 66.27 L 533.02 62.94 L 545.62 63.10 L 558.21 54.61 L 570.81 54.72 L 583.40 58.50 L 596.00 54.85" fill="none" stroke="#9a3b24" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="596.00" cy="54.85" r="2.4" fill="#9a3b24"/>
+</svg></div>
+      <p class="caption">7-day BTC · Yahoo Finance · spot CoinGecko · ~7:10 AM ET</p>
+      <div class="story">
+        <p class="label">ETF rebound</p>
+        <p>Spot bitcoin ETFs flipped green Wednesday: Farside Sep 2 net +$101.1m after Tuesday’s −$236.5m. IBIT led; GBTC still out. Ether products broke a 12-session inflow streak with −$48.2m.</p>
+      </div>
+      <div class="story">
+        <p class="label">FOMC / Clarity</p>
+        <p>Jobs Friday, CPI Sep 11, FOMC Sep 15–16. Senate cloture on H.R. 3633 (Clarity Act) still ripens Sep 15 at 2:15 PM EDT.</p>
+      </div>
+      <a class="more" href="2026-09-03/scout.html">Open tape →</a>
+    </section>
+
+    <section>
+      <p class="label">Deck</p>
+      <div class="deck-row">
+        <p class="deck-n">3</p>
+        <div>
+          <h2>Three days since</h2>
+          <p>Monday’s ~300 m — 150 back / 150 free. Room for another swim this week.</p>
+          <p class="muted">Caps still two and straps out; restock open.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pull">
+      <p class="label">Verse</p>
+      <p class="verse">“This is what the LORD says—your Redeemer, the Holy One of Israel: “I am the LORD your God, who teaches you what is best for you, who directs you in the way you should go.””</p>
+      <p class="muted">Isaiah 48:17 · NIV · Bible Gateway Verse of the Day</p>
+    </section>
+
+    <section>
+      <p class="label">Astrology · Virgo</p>
+      <h2>Before the cells</h2>
+      <p>Birthday weekend is behind you. Thursday is ordinary Virgo: a noon swim, then Daphne’s speech at two, with afternoon storms stacking on the back half of the day.</p>
+      <p>The craft today is timing. Morning looks quieter; the lightning risk thickens after lunch. Getting in the water while the sky still cooperates is the clean move — not rushing, just not dawdling past the window.</p>
+      <p>Speech therapy is the fixed point. Build the day around that and let the weather have the late afternoon. Small checklist, clear order, done.</p>
+    </section>
+
+    <footer>Winter Haven · Thursday 3 September 2026</footer>
+  </div>
+</body>
+</html>
