@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tape · 4 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+
+
+:root {
+  --paper: #f3ead8;
+  --ink: #241c14;
+  --muted: #6b5a48;
+  --rule: #c9b79a;
+  --rust: #9a3b24;
+  --card: #faf4e8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background:
+    radial-gradient(1200px 700px at 20% -10%, #f7f0e0, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(36,28,20,.015) 3px),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 40px 20px 72px; }
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(40px, 10vw, 60px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+.date { font-size: 13px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+section {
+  background: var(--card);
+  border: 1px solid rgba(36,28,20,.08);
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 22px;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+p { margin: 0 0 8px; font-size: 16px; }
+p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); }
+a { color: var(--rust); text-underline-offset: 3px; }
+.back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
+.back a { text-decoration: none; }
+.event {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,183,154,.55);
+}
+.event time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 8.2em;
+  flex-shrink: 0;
+}
+.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+.deg {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(64px, 18vw, 92px);
+  letter-spacing: -.045em;
+  line-height: .85;
+  margin: 0 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin: 6px 0 14px;
+}
+.strip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+}
+.strip span.mark {
+  background: var(--rust);
+  color: var(--card);
+  border-color: var(--rust);
+}
+.strip span.today {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+.occ {
+  display: grid;
+  grid-template-columns: 4.8em 1fr;
+  gap: 2px 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+}
+.occ .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+.occ .what { margin: 0; }
+.occ .place { margin: 0; color: var(--muted); font-size: 14px; grid-column: 2; }
+.more { display: inline-block; margin-top: 12px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.chip {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -.01em;
+  padding: 5px 10px 6px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.check {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+}
+.links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 4px; font-size: 15px; }
+.deck-row { display: flex; gap: 16px; align-items: flex-start; }
+.deck-n {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 64px;
+  letter-spacing: -.05em;
+  line-height: .8;
+  color: var(--rust);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+section.pull {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 2px 20px;
+  margin-bottom: 14px;
+}
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.tile {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 10px 10px 8px;
+}
+.tile .sym {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.tile .px {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 18px;
+  letter-spacing: -.02em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg.up { color: #2f5d3a; }
+.tile .chg.down { color: var(--rust); }
+.spark { margin: 2px -2px 6px; }
+.spark svg { display: block; width: 100%; }
+.caption { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.story { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.story .label { margin-bottom: 4px; }
+.story p { font-size: 15px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 8px;
+  margin: 10px 0 8px;
+}
+.stats dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.stats dd {
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+.flow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  font-size: 14px;
+  margin: 8px 0 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.flow .k { color: var(--muted); }
+.flow .v { font-variant-numeric: tabular-nums; text-align: right; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+
+
+.legend { display:flex; gap:14px; font-size:12px; color:var(--muted); margin:0 0 8px; flex-wrap:wrap; }
+.legend i { display:inline-block; width:18px; height:3px; vertical-align:middle; margin-right:4px; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <p class="back"><a href="../">← Morning</a></p>
+    <header>
+      <div>
+        <p class="kicker">Scout</p>
+        <h1>Tape</h1>
+      </div>
+      <p class="date">Friday<br>4 September 2026</p>
+    </header>
+
+    <section>
+      <p class="label">Majors · 7-day</p>
+      <div class="tiles">
+        <div class="tile">
+          <p class="sym">BTC</p>
+          <p class="px">$81,187</p>
+          <p class="chg up">+4.29%</p>
+        </div>
+        <div class="tile">
+          <p class="sym">ETH</p>
+          <p class="px">$2,524</p>
+          <p class="chg up">+5.12%</p>
+        </div>
+        <div class="tile">
+          <p class="sym">SOL</p>
+          <p class="px">$104.03</p>
+          <p class="chg up">+3.43%</p>
+        </div>
+      </div>
+      <p class="legend"><span><i style="background:#9a3b24"></i>BTC</span><span><i style="background:#3a5a7a"></i>ETH</span><span><i style="background:#6b5a48"></i>SOL</span></p>
+      <div class="spark"><svg viewBox="0 0 600 160" width="100%" height="160" role="img" aria-label="Seven-day BTC ETH SOL" preserveAspectRatio="none"><path d="M 8.00 118.62 L 16.23 120.52 L 24.45 121.31 L 32.68 121.92 L 40.90 121.25 L 49.13 123.17 L 57.35 119.81 L 65.58 115.15 L 73.80 106.64 L 82.03 107.60 L 90.25 104.67 L 98.48 105.99 L 106.70 108.23 L 114.93 107.05 L 123.15 108.07 L 131.38 111.25 L 139.61 106.34 L 147.83 86.70 L 156.06 72.91 L 164.28 81.60 L 172.51 94.36 L 180.73 98.83 L 188.96 113.27 L 197.18 118.32 L 205.41 110.67 L 213.63 105.90 L 221.86 96.90 L 230.08 102.81 L 238.31 95.32 L 246.54 93.38 L 254.76 82.29 L 262.99 86.91 L 271.21 94.76 L 279.44 100.23 L 287.66 92.31 L 295.89 78.51 L 304.11 93.57 L 312.34 114.08 L 320.56 109.26 L 328.79 107.02 L 337.01 123.46 L 345.24 136.00 L 353.46 128.08 L 361.69 133.20 L 369.92 140.62 L 378.14 124.97 L 386.37 122.31 L 394.59 127.15 L 402.82 147.90 L 411.04 152.00 L 419.27 138.91 L 427.49 135.63 L 435.72 129.67 L 443.94 128.82 L 452.17 130.59 L 460.39 130.38 L 468.62 120.35 L 476.85 117.29 L 485.07 121.85 L 493.30 119.36 L 501.52 93.24 L 509.75 37.88 L 517.97 25.92 L 526.20 17.49 L 534.42 8.00 L 542.65 17.38 L 550.87 25.88 L 559.10 29.45 L 567.32 25.66 L 575.55 21.17 L 583.77 20.05 L 592.00 20.53" fill="none" stroke="#9a3b24" stroke-width="2.0" stroke-opacity="1" stroke-linejoin="round" stroke-linecap="round"/><path d="M 8.00 89.21 L 16.23 92.70 L 24.45 91.00 L 32.68 95.00 L 40.90 95.94 L 49.13 95.43 L 57.35 95.53 L 65.58 87.06 L 73.80 79.87 L 82.03 79.58 L 90.25 79.98 L 98.48 73.69 L 106.70 77.42 L 114.93 76.42 L 123.15 77.27 L 131.38 79.15 L 139.61 72.79 L 147.83 58.34 L 156.06 8.00 L 164.28 25.30 L 172.51 44.09 L 180.73 62.78 L 188.96 102.47 L 197.18 109.55 L 205.41 95.52 L 213.63 91.12 L 221.86 85.80 L 230.08 86.16 L 238.31 66.90 L 246.54 64.48 L 254.76 56.51 L 262.99 61.10 L 271.21 64.43 L 279.44 70.65 L 287.66 61.91 L 295.89 50.23 L 304.11 61.53 L 312.34 80.67 L 320.56 74.37 L 328.79 83.71 L 337.01 99.13 L 345.24 117.32 L 353.46 110.36 L 361.69 118.05 L 369.92 130.77 L 378.14 116.69 L 386.37 108.99 L 394.59 113.56 L 402.82 152.00 L 411.04 151.03 L 419.27 135.16 L 427.49 143.33 L 435.72 134.64 L 443.94 135.75 L 452.17 137.66 L 460.39 142.46 L 468.62 126.91 L 476.85 125.75 L 485.07 131.55 L 493.30 133.04 L 501.52 108.05 L 509.75 45.13 L 517.97 41.19 L 526.20 22.97 L 534.42 24.45 L 542.65 28.34 L 550.87 29.06 L 559.10 30.75 L 567.32 26.90 L 575.55 10.08 L 583.77 10.78 L 592.00 13.73" fill="none" stroke="#3a5a7a" stroke-width="1.2" stroke-opacity="0.75" stroke-linejoin="round" stroke-linecap="round"/><path d="M 8.00 56.96 L 16.23 56.35 L 24.45 57.27 L 32.68 59.24 L 40.90 65.48 L 49.13 62.89 L 57.35 58.18 L 65.58 39.93 L 73.80 38.26 L 82.03 36.74 L 90.25 32.33 L 98.48 35.98 L 106.70 36.59 L 114.93 39.17 L 123.15 42.97 L 131.38 46.17 L 139.61 38.41 L 147.83 8.00 L 156.06 11.19 L 164.28 14.69 L 172.51 43.89 L 180.73 58.64 L 188.96 83.73 L 197.18 86.61 L 205.41 76.12 L 213.63 70.95 L 221.86 69.58 L 230.08 64.87 L 238.31 63.35 L 246.54 73.39 L 254.76 48.45 L 262.99 59.70 L 271.21 67.61 L 279.44 67.15 L 287.66 61.22 L 295.89 51.03 L 304.11 68.67 L 312.34 86.61 L 320.56 81.90 L 328.79 86.31 L 337.01 102.73 L 345.24 122.65 L 353.46 115.35 L 361.69 122.04 L 369.92 130.56 L 378.14 112.46 L 386.37 112.77 L 394.59 119.31 L 402.82 137.55 L 411.04 152.00 L 419.27 133.14 L 427.49 135.27 L 435.72 124.02 L 443.94 121.44 L 452.17 110.18 L 460.39 114.14 L 468.62 108.97 L 476.85 103.80 L 485.07 110.79 L 493.30 110.03 L 501.52 91.18 L 509.75 42.82 L 517.97 47.08 L 526.20 36.89 L 534.42 36.89 L 542.65 56.35 L 550.87 58.18 L 559.10 59.85 L 567.32 60.00 L 575.55 49.82 L 583.77 53.31 L 592.00 54.23" fill="none" stroke="#6b5a48" stroke-width="1.2" stroke-opacity="0.75" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+      <p class="caption">Shapes normalized per asset · Yahoo Finance 7d · spot CoinGecko · ~7:15 AM ET</p>
+      <dl class="stats">
+        <div><dt>BTC week</dt><dd>$76,568–$81,759</dd></div>
+        <div><dt>ETH week</dt><dd>$2,371–$2,529</dd></div>
+        <div><dt>SOL week</dt><dd>$97.65–$107.12</dd></div>
+      </dl>
+      <div class="flow">
+        <span class="k">Spot BTC ETFs (Farside, Sep 3)</span><span class="v">+$730.8m</span>
+        <span class="k">IBIT / ARKB / FBTC</span><span class="v">+$454.0 / +$137.7 / +$74.4m</span>
+        <span class="k">Spot ETH ETFs (Farside, Sep 3)</span><span class="v">+$141.4m</span>
+        <span class="k">ETHA / FETH</span><span class="v">+$72.1 / +$65.1m</span>
+      </div>
+      <p class="caption">ETF figures: Farside · meme mcaps from Scout (RH $1.06b, SOL meme $3.77b, total meme $33.3b)</p>
+    </section>
+
+    <section>
+      <p class="label">Story</p>
+      <h2>Biggest ETF day since January</h2>
+      <p>Spot bitcoin ETFs posted their biggest single-day haul since mid-January: Farside shows Sep 3 net +$730.8m after Wednesday’s +$101.1m, with BlackRock IBIT +$454.0m (~62% of the buy), ARKB +$137.7m, and FBTC +$74.4m; only HODL and BTCW printed outflows. Ether products flipped back green at +$141.4m (ETHA +72.1, FETH +65.1) after Wednesday’s −$48.2m streak-breaker. BTC reclaimed the $80k handle into the print; CryptoQuant still flags weak fresh spot demand and short covering, with a decisive close above ~$83k as the named bull/bear threshold (365-day MA near $82.3k).</p>
+      <p class="muted" style="font-size:14px;"><a href="https://farside.co.uk/btc/">Farside BTC</a> · <a href="https://farside.co.uk/eth/">Farside ETH</a> · <a href="https://cointelegraph.com/markets/bitcoin-etf-draw-731-million-highest-january-btc-80k">Cointelegraph</a></p>
+    </section>
+
+    <section>
+      <p class="label">Story</p>
+      <h2>Payrolls into FOMC</h2>
+      <p>August nonfarm payrolls land this morning (8:30 a.m. ET) — last major labor print before the Sep 15–16 FOMC. CME FedWatch swung from roughly 60–70% odds of a 25 bp hike earlier this week toward a coin-flip into the print (hold at 3.50–3.75% vs lift to 3.75–4.00%), after Chair Kevin Warsh’s Jackson Hole hawkishness and more recent softer pushback from Fed Governor Christopher Waller. Soft jobs can cut hike odds; August CPI on Sep 11 can put them right back.</p>
+      <p class="muted" style="font-size:14px;"><a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html">CME FedWatch</a></p>
+    </section>
+
+    <section>
+      <p class="label">Story</p>
+      <h2>Clarity Act cloture</h2>
+      <p>Senate Majority Leader John Thune’s cloture on the motion to proceed to H.R. 3633 (Digital Asset Market Clarity Act) still ripens Tuesday, Sep 15 at 2:15 p.m. EDT — 60 votes to open floor debate, not final passage. Republicans still need roughly seven Democratic or independent votes; ethics language, DeFi liability, and stablecoin-yield fights remain the named blockers. The calendar sits on the same week as FOMC, so a failed cloture risks pushing market-structure work past the election window.</p>
+      <p class="muted" style="font-size:14px;"><a href="https://www.dailypress.senate.gov/">Daily Press</a></p>
+    </section>
+
+    <footer>Scout · CoinGecko + Farside + Yahoo · 4 September 2026</footer>
+  </div>
+</body>
+</html>
