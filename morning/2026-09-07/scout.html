@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout · Tape · 7 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+
+
+:root {
+  --paper: #f3ead8;
+  --ink: #241c14;
+  --muted: #6b5a48;
+  --rule: #c9b79a;
+  --rust: #9a3b24;
+  --card: #faf4e8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background:
+    radial-gradient(1200px 700px at 20% -10%, #f7f0e0, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(36,28,20,.015) 3px),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 40px 20px 72px; }
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(40px, 10vw, 60px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+.date { font-size: 13px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+section {
+  background: var(--card);
+  border: 1px solid rgba(36,28,20,.08);
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 22px;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+p { margin: 0 0 8px; font-size: 16px; }
+p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); }
+a { color: var(--rust); text-underline-offset: 3px; }
+.back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
+.back a { text-decoration: none; }
+.event {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,183,154,.55);
+}
+.event time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 8.2em;
+  flex-shrink: 0;
+}
+.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+.deg {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(64px, 18vw, 92px);
+  letter-spacing: -.045em;
+  line-height: .85;
+  margin: 0 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin: 6px 0 14px;
+}
+.strip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+}
+.strip span.mark {
+  background: var(--rust);
+  color: var(--card);
+  border-color: var(--rust);
+}
+.strip span.today {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+.occ {
+  display: grid;
+  grid-template-columns: 4.8em 1fr;
+  gap: 2px 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+}
+.occ .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+.occ .what { margin: 0; }
+.occ .place { margin: 0; color: var(--muted); font-size: 14px; grid-column: 2; }
+.more { display: inline-block; margin-top: 12px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.chip {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -.01em;
+  padding: 5px 10px 6px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.check {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+}
+.links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 4px; font-size: 15px; }
+.deck-row { display: flex; gap: 16px; align-items: flex-start; }
+.deck-n {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 64px;
+  letter-spacing: -.05em;
+  line-height: .8;
+  color: var(--rust);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+section.pull {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 2px 20px;
+  margin-bottom: 14px;
+}
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.tile {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 10px 10px 8px;
+}
+.tile .sym {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.tile .px {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 18px;
+  letter-spacing: -.02em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg.up { color: #2f5d3a; }
+.tile .chg.down { color: var(--rust); }
+.spark { margin: 2px -2px 6px; }
+.spark svg { display: block; width: 100%; }
+.caption { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.story { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.story .label { margin-bottom: 4px; }
+.story p { font-size: 15px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 8px;
+  margin: 10px 0 8px;
+}
+.stats dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.stats dd {
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+.flow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  font-size: 14px;
+  margin: 8px 0 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.flow .k { color: var(--muted); }
+.flow .v { font-variant-numeric: tabular-nums; text-align: right; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+
+
+.legend { display:flex; gap:14px; font-size:12px; color:var(--muted); margin:0 0 8px; flex-wrap:wrap; }
+.legend i { display:inline-block; width:18px; height:3px; vertical-align:middle; margin-right:4px; }
+
+.chart { display: block; width: 100%; height: auto; margin: 8px 0 4px; }
+.legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted); margin: 0 0 12px; flex-wrap: wrap; }
+.legend i { display: inline-block; width: 18px; height: 3px; margin-right: 6px; vertical-align: middle; }
+.table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; margin: 8px 0 14px; }
+.table th, .table td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.table th { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.kicker-story { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--rust); margin: 0 0 4px; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <p class="kicker"><a href="../">← Morning</a></p>
+        <h1>Tape</h1>
+      </div>
+      <p class="date">Monday<br>7 September 2026</p>
+    </header>
+
+    <section>
+      <p class="label">Majors · 7-day</p>
+      <svg viewBox="0 0 640 220" role="img" aria-label="7-day majors" class="chart">
+  <line x1="28" y1="192" x2="612" y2="192" stroke="#c9b79a" stroke-width="1"/>
+  <polyline fill="none" stroke="#9a3b24" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="28.0,139.3 38.4,128.5 48.9,118.7 59.3,119.5 69.7,129.8 80.1,134.4 90.6,109.6 101.0,153.7 111.4,146.8 121.9,144.3 132.3,175.5 142.7,169.7 153.1,169.5 163.6,174.4 174.0,162.0 184.4,190.4 194.9,192.0 205.3,183.4 215.7,172.2 226.1,170.6 236.6,173.7 247.0,157.0 257.4,156.9 267.9,155.8 278.3,152.2 288.7,61.7 299.1,43.1 309.6,28.0 320.0,35.1 330.4,50.9 340.9,45.0 351.3,39.9 361.7,36.6 372.1,117.1 382.6,97.5 393.0,89.6 403.4,90.8 413.9,94.1 424.3,93.7 434.7,91.6 445.1,92.7 455.6,88.7 466.0,77.7 476.4,88.3 486.9,85.5 497.3,82.6 507.7,80.3 518.1,85.1 528.6,82.4 539.0,95.8 549.4,88.7 559.9,82.9 570.3,67.8 580.7,84.6 591.1,88.0 601.6,99.3 612.0,102.9"/>
+  <polyline fill="none" stroke="#3a5a7a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" points="28.0,103.8 38.4,119.1 48.9,88.4 59.3,74.4 69.7,88.9 80.1,96.7 90.6,88.7 101.0,85.1 111.4,101.7 121.9,115.7 132.3,127.4 142.7,142.9 153.1,148.7 163.6,163.8 174.0,146.4 184.4,143.2 194.9,192.0 205.3,160.9 215.7,176.6 226.1,171.1 236.6,183.9 247.0,176.1 257.4,154.2 267.9,163.9 278.3,166.1 288.7,132.2 299.1,61.7 309.6,37.8 320.0,58.5 330.4,48.4 340.9,46.0 351.3,51.1 361.7,28.0 372.1,106.4 382.6,97.1 393.0,102.2 403.4,106.7 413.9,105.8 424.3,108.9 434.7,100.4 445.1,103.7 455.6,104.2 466.0,85.9 476.4,78.8 486.9,75.4 497.3,48.4 507.7,50.8 518.1,58.6 528.6,53.6 539.0,61.2 549.4,72.3 559.9,65.9 570.3,46.8 580.7,51.4 591.1,58.0 601.6,67.4 612.0,67.7"/>
+  <polyline fill="none" stroke="#2f5d3a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" points="28.0,91.6 38.4,114.8 48.9,106.1 59.3,91.6 69.7,100.1 80.1,100.1 90.6,92.5 101.0,100.8 111.4,115.0 121.9,123.1 132.3,141.1 142.7,157.4 153.1,165.3 163.6,175.5 174.0,157.1 184.4,161.7 194.9,192.0 205.3,174.5 215.7,180.2 226.1,169.8 236.6,167.0 247.0,155.6 257.4,142.2 267.9,151.4 278.3,151.2 288.7,133.7 299.1,74.5 309.6,62.7 320.0,81.7 330.4,88.5 340.9,87.0 351.3,92.5 361.7,82.8 372.1,128.0 382.6,124.2 393.0,126.7 403.4,126.0 413.9,123.6 424.3,125.4 434.7,117.2 445.1,111.7 455.6,109.3 466.0,95.7 476.4,94.9 486.9,96.0 497.3,83.3 507.7,52.5 518.1,61.5 528.6,36.6 539.0,28.0 549.4,46.4 559.9,57.6 570.3,50.6 580.7,60.5 591.1,65.1 601.6,76.5 612.0,66.1"/>
+</svg>
+      <p class="legend"><span><i style="background:#9a3b24"></i>BTC</span><span><i style="background:#3a5a7a"></i>ETH</span><span><i style="background:#2f5d3a"></i>SOL</span></p>
+      <table class="table">
+        <thead><tr><th></th><th>Last</th><th>24h</th><th>7d range</th></tr></thead>
+        <tbody>
+          <tr><td>BTC</td><td>$79,322</td><td>−0.8%</td><td>$76,591–$81,731</td></tr>
+          <tr><td>ETH</td><td>$2,488</td><td>−0.6%</td><td>$2,371–$2,526</td></tr>
+          <tr><td>SOL</td><td>$105.00</td><td>−1.5%</td><td>$97.65–$107.08</td></tr>
+        </tbody>
+      </table>
+      <p class="caption">CoinGecko · ~7:05 AM ET. Spot BTC ETFs (Farside Sep 4): net +$174.6m. Spot ETH ETFs: net +$25.9m. Labor Day — no Sep 5–7 print yet.</p>
+    </section>
+
+    <section>
+      <p class="kicker-story">Bridge</p>
+      <h2>Liquid pauses after ~3,996 BTC peg-out</h2>
+      <p>Blockstream’s Liquid Network paused after roughly 3,996 BTC (~$320m) left the federation peg wallet Sunday through a SideSwap Peg-out Authorization Key. Liquid says the PAK and other keys were not compromised; Blockstream and SideSwap blame a bug in the Elements node software. Reserves fell from about 4,200 BTC to ~200 BTC; bridge nodes disabled; L-BTC deposits and withdrawals paused at exchanges. Other Liquid assets (USDT, RWAs) called unaffected. The recipient labeled itself “whitehats” on-chain and is negotiating return of most coins after a patch; no confirmed return as of this morning. Sector heat may mint memes — Froth lane if anything.</p>
+      <p class="caption"><a href="https://news.bitcoin.com/crypto-news/we-are-whitehats-nearly-4000-btc-drained-from-blockstreams-liquid-peg/">Bitcoin.com</a> · <a href="https://cryptobriefing.com/liquid-network-3996-btc-peg-out-bug/">Crypto Briefing</a></p>
+    </section>
+
+    <section>
+      <p class="kicker-story">Macro</p>
+      <h2>Jobs hangover into a holiday open</h2>
+      <p>Friday’s August employment situation still frames the tape: BLS printed +162,000 nonfarm payrolls with unemployment unchanged at 4.1%, well above the pre-print consensus near 50–56k. BTC slipped under $80k into the weekend after Wednesday’s reclaim and the $730.8m Sep 3 spot-BTC ETF haul; Friday still added +$174.6m (IBIT +117.4, FBTC +57.2), leaving a three-session BTC streak near $1.01b before the holiday. Next markers: CPI Sep 10–11, then FOMC Sep 15–16.</p>
+      <p class="caption"><a href="https://www.bls.gov/news.release/empsit.htm">BLS</a> · <a href="https://farside.co.uk/btc/">Farside BTC</a> · <a href="https://farside.co.uk/eth/">Farside ETH</a></p>
+    </section>
+
+    <section>
+      <p class="kicker-story">Regulation</p>
+      <h2>Clarity Act cloture Sep 15</h2>
+      <p>Senate cloture on the motion to proceed to H.R. 3633 (Digital Asset Market Clarity Act) remains set for Tuesday, Sep 15 at 2:15 p.m. EDT — 60 votes to open floor debate, not final passage. Majority Leader John Thune filed the motion; Republicans hold 53 seats, so roughly seven Democratic or independent votes are still required. Ethics language, illicit-finance reach, and DeFi/stablecoin fights remain the named blockers. Same week as FOMC.</p>
+      <p class="caption"><a href="https://www.congress.gov/bill/119th-congress/house-bill/3633">Congress.gov</a></p>
+    </section>
+
+    <section>
+      <p class="kicker-story">Peptides</p>
+      <h2>Gan &amp; Lee × Menarini — bofanglutide Europe</h2>
+      <p>Gan &amp; Lee and Menarini announced Sep 3 an exclusive Europe license for bofanglutide (GZR18), an investigational once-every-two-weeks subcutaneous GLP-1 RA for adults with obesity or overweight. Economics: €62m upfront, up to €664m milestones, double-digit royalties (headline up to €726m excluding royalties). Menarini handles regulatory submissions and commercialization across 39 countries. Still investigational — not EMA-authorized; global Phase 3 intended for European registration. Same week: NMPA cleared clinical trials of GZC8072 Tablet, a once-weekly oral peptide GLP-1 RA for type 2 diabetes.</p>
+      <p class="caption"><a href="https://www.prnewswire.com/news-releases/gan--lee-and-menarini-group-partner-to-advance-bofanglutide-in-europe-302868846.html">PR Newswire</a> · <a href="https://www.ganlee.com/detail/864.html">Gan &amp; Lee</a></p>
+    </section>
+
+    <section>
+      <p class="kicker-story">Biomed</p>
+      <h2>Hengrui oral GLP-1 filings accepted</h2>
+      <p>Hengrui (via Shandong Shengdi) said NMPA accepted marketing applications for HRS-7535 tablets, an oral once-daily small-molecule GLP-1R agonist: type 2 diabetes (Sep 2) and long-term adult weight management (Sep 3). Not an approval — acceptance starts review. Weight file rests on HARBOR-1 (n=556): Hengrui reports 180 mg mean loss 10.9% at week 44 and 11.1% at week 50 vs ~2.5–2.6% placebo. Ex-Greater China rights sit with Kailera as KAI-7535.</p>
+      <p class="caption"><a href="https://www.hengrui.com/media/detail-1028.html">Hengrui</a> · <a href="https://clinicaltrials.gov/study/NCT06904105">NCT06904105</a></p>
+    </section>
+
+    <footer>Scout drop · CoinGecko · Farside · sourced links above</footer>
+  </div>
+</body>
+</html>
