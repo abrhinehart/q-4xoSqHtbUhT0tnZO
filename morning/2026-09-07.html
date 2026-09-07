@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning · 7 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+
+
+:root {
+  --paper: #f3ead8;
+  --ink: #241c14;
+  --muted: #6b5a48;
+  --rule: #c9b79a;
+  --rust: #9a3b24;
+  --card: #faf4e8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background:
+    radial-gradient(1200px 700px at 20% -10%, #f7f0e0, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(36,28,20,.015) 3px),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 40px 20px 72px; }
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(40px, 10vw, 60px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+.date { font-size: 13px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+section {
+  background: var(--card);
+  border: 1px solid rgba(36,28,20,.08);
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 22px;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+p { margin: 0 0 8px; font-size: 16px; }
+p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); }
+a { color: var(--rust); text-underline-offset: 3px; }
+.back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
+.back a { text-decoration: none; }
+.event {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,183,154,.55);
+}
+.event time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 8.2em;
+  flex-shrink: 0;
+}
+.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+.deg {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(64px, 18vw, 92px);
+  letter-spacing: -.045em;
+  line-height: .85;
+  margin: 0 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin: 6px 0 14px;
+}
+.strip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+}
+.strip span.mark {
+  background: var(--rust);
+  color: var(--card);
+  border-color: var(--rust);
+}
+.strip span.today {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+.occ {
+  display: grid;
+  grid-template-columns: 4.8em 1fr;
+  gap: 2px 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+}
+.occ .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+.occ .what { margin: 0; }
+.occ .place { margin: 0; color: var(--muted); font-size: 14px; grid-column: 2; }
+.more { display: inline-block; margin-top: 12px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.chip {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -.01em;
+  padding: 5px 10px 6px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.check {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+}
+.links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 4px; font-size: 15px; }
+.deck-row { display: flex; gap: 16px; align-items: flex-start; }
+.deck-n {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 64px;
+  letter-spacing: -.05em;
+  line-height: .8;
+  color: var(--rust);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+section.pull {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 2px 20px;
+  margin-bottom: 14px;
+}
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.tile {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 10px 10px 8px;
+}
+.tile .sym {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.tile .px {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 18px;
+  letter-spacing: -.02em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg.up { color: #2f5d3a; }
+.tile .chg.down { color: var(--rust); }
+.spark { margin: 2px -2px 6px; }
+.spark svg { display: block; width: 100%; }
+.caption { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.story { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.story .label { margin-bottom: 4px; }
+.story p { font-size: 15px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 8px;
+  margin: 10px 0 8px;
+}
+.stats dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.stats dd {
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+.flow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  font-size: 14px;
+  margin: 8px 0 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.flow .k { color: var(--muted); }
+.flow .v { font-variant-numeric: tabular-nums; text-align: right; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+
+
+
+.pile { margin: 6px 0 0; padding-left: 1.1em; }
+.pile li { margin: 0 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.chip { display: inline-block; border: 1px solid var(--rule); background: #fffaf0; padding: 4px 10px; font-size: 13px; border-radius: 999px; }
+.event .chip { margin-left: 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+
+.verse-card { background: transparent; border: none; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 22px 2px 20px; }
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.ref { font-size: 13px; color: var(--muted); margin: 0; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+code { font-size: 0.92em; }
+
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <p class="kicker">Winter Haven · Labor Day</p>
+        <h1>Morning</h1>
+      </div>
+      <p class="date">Monday<br>7 September 2026</p>
+    </header>
+
+    <section>
+      <p class="label">Calendar</p>
+      <p class="event"><time>12:00–1:00 PM</time> Maybe swim <span class="chip">optional</span></p>
+      <p class="note">Labor Day. Standing Monday lift at Erik’s isn’t on the calendar. Deposits (TrustCo + SouthState) sit Tuesday as an all-day errand.</p>
+    </section>
+
+    <section>
+      <p class="label">Weather · NWS / KGIF</p>
+      <p class="deg">79°</p>
+      <h2>Clear now · storms midday</h2>
+      <p>KGIF ~6:50 AM ET: clear, air 79°F, wind ~7 mph. High near 91 with scattered showers and thunderstorms roughly 10 AM–2 PM, then a chance into the afternoon. WSW 1–6 mph. Tonight mostly cloudy, low around 74.</p>
+      <p class="note">Noon swim (12–1): air ~88°F, scattered storms, PoP ~26% at noon rising toward ~48% by 1. Lightning risk real in the window — <strong>caution</strong>. Full go/caution/no-go at the 10:40 swim brief.</p>
+    </section>
+
+    <section>
+      <p class="label">This week</p>
+      <div class="strip" aria-label="Week of 6–12 September"><div class="day"><span class="d">S</span><span class="n">6</span></div><div class="day today"><span class="d">M</span><span class="n">7</span></div><div class="day mark"><span class="d">T</span><span class="n">8</span></div><div class="day"><span class="d">W</span><span class="n">9</span></div><div class="day mark"><span class="d">T</span><span class="n">10</span></div><div class="day"><span class="d">F</span><span class="n">11</span></div><div class="day"><span class="d">S</span><span class="n">12</span></div></div>
+      <p class="event"><time>Tue 2:30 PM</time> Pick up mom → Messieh 3:00</p>
+      <p class="event"><time>Thu 2:00 PM</time> Daphne speech therapy</p>
+      <p class="more"><a href="2026-09-07/week.html">Open the week →</a></p>
+    </section>
+
+    <section>
+      <p class="label">Open items</p>
+      <ul class="pile">
+        <li>Deposits at TrustCo + SouthState (calendar has them Tue; amounts/branches TBD)</li>
+        <li>Email Mike at Quiddity — shade-structure call</li>
+        <li>See Pete Tue ~8:30–9:00 — Villamar Phase 9 access</li>
+        <li>DL + USPS address for the 1491 house; held mail at the PO</li>
+        <li>Document house systems (A/C, electric, plumbing, irrigation, gas)</li>
+      </ul>
+    </section>
+
+    <section>
+      <p class="label">Outfit</p>
+      <h2>Flamingo tee · heather teal</h2>
+      <p>Labor Day, ~80°F dry, optional noon swim. Closet still tops-only — bottoms/shoes blank until a dump. Alt: Lucky Brand henley (heather grey) if you end up around people; Chatham Cape Cod tee if you want quieter wet-to-dry.</p>
+    </section>
+
+    <section>
+      <p class="label">Quill</p>
+      <div class="chips">
+        <span class="chip">mendacious</span>
+        <span class="chip">loquacious</span>
+        <span class="chip">dogmatic</span>
+        <span class="chip">umbrage</span>
+        <span class="chip">inchoate</span>
+      </div>
+      <p class="more"><a href="https://abrhinehart.github.io/q-4xoSqHtbUhT0tnZO/">Open lesson →</a></p>
+      <p class="note">Check in chat: Yesterday’s heinous fraud was shockingly wicked. A claim that is deliberately false rather than merely evil is which new word?</p>
+    </section>
+
+    <section>
+      <p class="label">Scout · Tape</p>
+      <div class="tiles">
+        <div class="tile"><p class="sym">BTC</p><p class="px">$79,322</p><p class="chg down">-0.8%</p></div>
+        <div class="tile"><p class="sym">ETH</p><p class="px">$2,488</p><p class="chg down">-0.6%</p></div>
+        <div class="tile"><p class="sym">SOL</p><p class="px">$105.00</p><p class="chg down">-1.5%</p></div>
+      </div>
+      <div class="spark"><svg viewBox="0 0 560 72" role="img" aria-label="7-day BTC price" preserveAspectRatio="none">
+  <polyline fill="none" stroke="#2f5d3a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="4.0,47.4 13.9,43.2 23.7,39.4 33.6,39.7 43.4,43.7 53.3,45.5 63.1,35.8 73.0,53.1 82.9,50.4 92.7,49.4 102.6,61.5 112.4,59.3 122.3,59.2 132.1,61.1 142.0,56.3 151.9,67.4 161.7,68.0 171.6,64.6 181.4,60.3 191.3,59.6 201.1,60.9 211.0,54.3 220.9,54.3 230.7,53.9 240.6,52.5 250.4,17.1 260.3,9.9 270.1,4.0 280.0,6.8 289.9,12.9 299.7,10.6 309.6,8.6 319.4,7.4 329.3,38.8 339.1,31.1 349.0,28.0 358.9,28.5 368.7,29.8 378.6,29.7 388.4,28.8 398.3,29.2 408.1,27.7 418.0,23.4 427.9,27.5 437.7,26.4 447.6,25.3 457.4,24.4 467.3,26.3 477.1,25.2 487.0,30.5 496.9,27.7 506.7,25.4 516.6,19.5 526.4,26.1 536.3,27.4 546.1,31.8 556.0,33.2"/>
+</svg></div>
+      <p class="caption">7-day BTC · CoinGecko · as of ~7:05 AM ET</p>
+      <div class="story">
+        <p class="label">Liquid peg</p>
+        <p>~3,996 BTC left Blockstream’s Liquid federation peg Sunday via a SideSwap Peg-out Authorization Key. Keys not compromised — Elements node bug. Whitehats negotiating return; L-BTC paused.</p>
+      </div>
+      <div class="story">
+        <p class="label">Jobs hangover</p>
+        <p>Friday’s +162k payrolls still frame the open. Spot BTC ETFs +$174.6m Fri (Sep 4); holiday dark until the next print. CPI Sep 10–11, FOMC Sep 15–16.</p>
+      </div>
+      <div class="story">
+        <p class="label">Clarity Act</p>
+        <p>Senate cloture on H.R. 3633 set Tue Sep 15 at 2:15 PM ET — 60 votes to open debate. Same week as FOMC.</p>
+      </div>
+      <p class="more"><a href="2026-09-07/scout.html">Open tape →</a></p>
+    </section>
+
+    <section>
+      <p class="label">Deck</p>
+      <h2>Monday lift · Erik’s</h2>
+      <p>Fresh week. Last swim still Monday’s ~300 m (150 back / 150 free); the second never landed. Caps still two and straps out — restock open.</p>
+    </section>
+
+    <section>
+      <p class="label">Assay</p>
+      <p><strong>DRIFT</strong> Assay skill seats omit Porter — Forge should add it. <strong>ROT</strong> empty New Bot shell <code>2bc71792…</code> still live — delete. Froth watches + Scout Monday peptide duplicate stay paused on purpose. Swim-day weather next check 10:40 ET.</p>
+    </section>
+
+    <section>
+      <p class="label">Atlas</p>
+      <p>63 repos · 14 alive / 28 quiet / 20 stale. Docs PR this week: <a href="https://github.com/abrhinehart/open-brain/pull/8">open-brain#8</a> (root README). Also set empty GitHub descriptions on <code>CountyData2</code> and <code>trading</code> from their READMEs.</p>
+    </section>
+
+    <section class="verse-card">
+      <p class="label">Verse</p>
+      <p class="verse">“He is the one we proclaim, admonishing and teaching everyone with all wisdom, so that we may present everyone fully mature in Christ.”</p>
+      <p class="ref">Colossians 1:28 · NIV · <a href="https://www.biblegateway.com/passage/?search=Colossians%201%3A28&amp;version=NIV">Bible Gateway Verse of the Day</a></p>
+    </section>
+
+    <section>
+      <p class="label">Astrology · Virgo</p>
+      <h2>Waning crescent, 15%</h2>
+      <p>Ten days past your birthday and the sun is still in your sign. The moon is a thin waning crescent (about 15% lit) after last quarter on the 4th — the kind of sky that wants one clean errand, not a pile.</p>
+      <p>Labor Day’s calendar is almost empty on purpose. If the noon swim looks stormy, treat the holiday as permission to keep the stack short: one deposit plan for tomorrow, the vocab five, and leave the house-systems list for a cooler head.</p>
+    </section>
+
+    <footer>NWS TBW / KGIF · CoinGecko · Farside · USNO moon · assembled 7:05 AM ET</footer>
+  </div>
+</body>
+</html>
