@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tape · 8 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+
+
+:root {
+  --paper: #f3ead8;
+  --ink: #241c14;
+  --muted: #6b5a48;
+  --rule: #c9b79a;
+  --rust: #9a3b24;
+  --card: #faf4e8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background:
+    radial-gradient(1200px 700px at 20% -10%, #f7f0e0, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(36,28,20,.015) 3px),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 40px 20px 72px; }
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(40px, 10vw, 60px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+.date { font-size: 13px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+section {
+  background: var(--card);
+  border: 1px solid rgba(36,28,20,.08);
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 22px;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+p { margin: 0 0 8px; font-size: 16px; }
+p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); }
+a { color: var(--rust); text-underline-offset: 3px; }
+.back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
+.back a { text-decoration: none; }
+.event {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,183,154,.55);
+}
+.event time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 8.2em;
+  flex-shrink: 0;
+}
+.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+.deg {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(64px, 18vw, 92px);
+  letter-spacing: -.045em;
+  line-height: .85;
+  margin: 0 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin: 6px 0 14px;
+}
+.strip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+}
+.strip span.mark {
+  background: var(--rust);
+  color: var(--card);
+  border-color: var(--rust);
+}
+.strip span.today {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+.occ {
+  display: grid;
+  grid-template-columns: 4.8em 1fr;
+  gap: 2px 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+}
+.occ .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+.occ .what { margin: 0; }
+.occ .place { margin: 0; color: var(--muted); font-size: 14px; grid-column: 2; }
+.more { display: inline-block; margin-top: 12px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.chip {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -.01em;
+  padding: 5px 10px 6px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.check {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+}
+.links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 4px; font-size: 15px; }
+.deck-row { display: flex; gap: 16px; align-items: flex-start; }
+.deck-n {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 64px;
+  letter-spacing: -.05em;
+  line-height: .8;
+  color: var(--rust);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+section.pull {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 2px 20px;
+  margin-bottom: 14px;
+}
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.tile {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 10px 10px 8px;
+}
+.tile .sym {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.tile .px {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 18px;
+  letter-spacing: -.02em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg.up { color: #2f5d3a; }
+.tile .chg.down { color: var(--rust); }
+.spark { margin: 2px -2px 6px; }
+.spark svg { display: block; width: 100%; }
+.caption { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.story { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.story .label { margin-bottom: 4px; }
+.story p { font-size: 15px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 8px;
+  margin: 10px 0 8px;
+}
+.stats dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.stats dd {
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+.flow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  font-size: 14px;
+  margin: 8px 0 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.flow .k { color: var(--muted); }
+.flow .v { font-variant-numeric: tabular-nums; text-align: right; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+
+
+
+.pile { margin: 6px 0 0; padding-left: 1.1em; }
+.pile li { margin: 0 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.chip { display: inline-block; border: 1px solid var(--rule); background: #fffaf0; padding: 4px 10px; font-size: 13px; border-radius: 999px; }
+.event .chip { margin-left: 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+
+.verse-card { background: transparent; border: none; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 22px 2px 20px; }
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.ref { font-size: 13px; color: var(--muted); margin: 0; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+code { font-size: 0.92em; }
+
+
+.legend { display:flex; gap:14px; font-size:12px; color:var(--muted); margin:0 0 12px; flex-wrap:wrap; }
+.legend i { display:inline-block; width:18px; height:3px; vertical-align:middle; margin-right:6px; }
+.chart { display: block; width: 100%; height: auto; margin: 8px 0 4px; }
+.table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; margin: 8px 0 14px; }
+.table th, .table td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.table th { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.kicker-story { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--rust); margin: 0 0 4px; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <p class="kicker"><a href="../">← Morning</a></p>
+        <h1>Tape</h1>
+      </div>
+      <p class="date">Tuesday<br>8 September 2026</p>
+    </header>
+
+    <section>
+      <p class="label">Majors · 7-day</p>
+      <svg viewBox="0 0 640 220" role="img" aria-label="7-day majors" class="chart">
+  <line x1="28" y1="192" x2="612" y2="192" stroke="#c9b79a" stroke-width="1"/>
+  <polyline fill="none" stroke="#9a3b24" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="28.0,192.0 125.3,28.0 222.7,94.1 320.0,87.8 417.3,66.1 514.7,117.0 612.0,147.4"/>
+  <polyline fill="none" stroke="#3a5a7a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" points="28.0,192.0 125.3,36.7 222.7,105.9 320.0,73.1 417.3,28.0 514.7,59.4 612.0,78.6"/>
+  <polyline fill="none" stroke="#2f5d3a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" points="28.0,192.0 125.3,94.8 222.7,149.8 320.0,116.2 417.3,28.0 514.7,97.8 612.0,118.9"/>
+</svg>
+      <p class="legend"><span><i style="background:#9a3b24"></i>BTC</span><span><i style="background:#3a5a7a"></i>ETH</span><span><i style="background:#2f5d3a"></i>SOL</span></p>
+      <table class="table">
+        <thead><tr><th></th><th>Last</th><th>24h</th><th>7d range</th></tr></thead>
+        <tbody>
+          <tr><td>BTC</td><td>$78,630</td><td>−0.9%</td><td>$77,300–$81,272</td></tr>
+          <tr><td>ETH</td><td>$2,484</td><td>−0.2%</td><td>$2,392–$2,515</td></tr>
+          <tr><td>SOL</td><td>$103.42</td><td>−1.5%</td><td>$100.39–$106.45</td></tr>
+
+        </tbody>
+      </table>
+      <p class="caption">Tiles: Coinbase Exchange (Scout). Chart/range: Yahoo Finance daily · ~7:05 AM ET. Spot BTC ETFs (Farside Sep 4): net +$174.6m. Spot ETH ETFs: net +$25.9m. Labor Day — no Sep 5–7 print yet.</p>
+      <div class="flow">
+        <span class="k">RH meme mcap</span><span class="v">$1.01b (−8.8%)</span>
+        <span class="k">SOL meme</span><span class="v">$3.72b (−2.9%)</span>
+        <span class="k">BASE meme</span><span class="v">$336m (−6.8%)</span>
+        <span class="k">Total meme</span><span class="v">$33.8b (−0.4%)</span>
+      </div>
+      <p class="caption">CoinGecko categories · Scout morning drop</p>
+    </section>
+
+    <section>
+      <p class="kicker-story">Bridge</p>
+      <h2>Liquid gets 3,400 BTC back</h2>
+      <p>After Sunday’s ~3,996–4,000 BTC peg-out (~$320m) via SideSwap’s Peg-out Authorization Key path — Liquid said PAK/federation keys were not compromised and blamed an Elements bug — the “white hat” party returned exactly 3,400 BTC to the labeled peg script at 16:09 UTC Sep 7 (tx bc49a46d) and kept ~598.5 BTC (~15%, ~$48m) as an implied bounty. On-chain OP_RETURN traffic with Blockstream covered patching bridge nodes before the return; Liquid’s last official X statement still describes a pause, and L-BTC deposit/withdrawal halts have not been publicly lifted. Sector heat may still mint memes — Froth lane if anything.</p>
+      <p class="caption"><a href="https://bitcoinmagazine.com/news/liquid-gets-3400-btc-back-after-on-chain-talks-white-hats-keep-598-5-btc">Bitcoin Magazine</a> · <a href="https://decrypt.co/377528/purported-white-hat-hackers-withdraw-320m-in-bitcoin-from-liquid">Decrypt</a> · <a href="https://cointelegraph.com/news/liquid-network-pauses-320m-bitcoin-withdrawal">Cointelegraph</a></p>
+    </section>
+
+    <section>
+      <p class="kicker-story">Regulation</p>
+      <h2>Clarity Act cloture still Sep 15</h2>
+      <p>Senate cloture on the motion to proceed to H.R. 3633 (Digital Asset Market Clarity Act) remains set for Tuesday, Sep 15 at 2:15 p.m. ET — 60 votes to open floor debate, not final passage. Majority Leader John Thune filed the motion Aug 8; Republicans hold 53 seats, so roughly seven Democratic or independent votes are still required. Ethics language, developer protection, commodities language, and stablecoin/crypto-rewards fights remain the named blockers. Same week as FOMC (Sep 15–16); CPI is Sep 10–11.</p>
+      <p class="caption"><a href="https://www.congress.gov/bill/119th-congress/house-bill/3633">Congress.gov</a> · <a href="https://www.paulhastings.com/insights/crypto-policy-tracker/cloture-filed-on-clarity-act-motion-to-proceed-cftc-to-advance-crypto-rules-either-way-fdic-approves-digital-asset-bank-and-court-rules-for-utah-on-event-contracts">Paul Hastings</a></p>
+    </section>
+
+    <section>
+      <p class="kicker-story">Exchange rules</p>
+      <h2>SEC clears Nasdaq Texas commodity trusts</h2>
+      <p>SEC Release No. 34-106268 (Sep 3) granted accelerated approval to Nasdaq Texas Rule 5711(d) for Commodity-Based Trust Shares: a “digital commodity” definition informed by the March 2026 SEC–CFTC joint interpretation, removal of the passive-only constraint, and a 15% NAV sleeve for non-qualifying digital commodities/securities (85% must still qualify). BTC, ETH, SOL, and XRP appear as examples meeting eligibility criteria — that is exchange listing arithmetic, not a new federal commodity classification. The order is substantially identical to July approvals for Nasdaq/NYSE Arca/Cboe; statutory CLARITY language would still supersede the provisional exchange definition.</p>
+      <p class="caption"><a href="https://financefeeds.com/sec-xrp-solana-commodity-nasdaq-texas-buffer/">FinanceFeeds</a></p>
+    </section>
+
+    <footer>Scout drop · Coinbase · Yahoo Finance · Farside · CoinGecko · sourced links above</footer>
+  </div>
+</body>
+</html>
