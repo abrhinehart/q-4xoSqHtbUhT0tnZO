@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!-- published 2026-09-11T07:35ET -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning · 11 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+:root {
+  --paper: #f3ead8;
+  --ink: #241c14;
+  --muted: #6b5a48;
+  --rule: #c9b79a;
+  --rust: #9a3b24;
+  --card: #faf4e8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background:
+    radial-gradient(1200px 700px at 20% -10%, #f7f0e0, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(36,28,20,.015) 3px),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 40px 20px 72px; }
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(40px, 10vw, 60px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+.date { font-size: 13px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+section {
+  background: var(--card);
+  border: 1px solid rgba(36,28,20,.08);
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 22px;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+p { margin: 0 0 8px; font-size: 16px; }
+p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); }
+a { color: var(--rust); text-underline-offset: 3px; }
+.back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
+.back a { text-decoration: none; }
+.event {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,183,154,.55);
+}
+.event time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 8.2em;
+  flex-shrink: 0;
+}
+.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+.deg {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(64px, 18vw, 92px);
+  letter-spacing: -.045em;
+  line-height: .85;
+  margin: 0 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin: 6px 0 14px;
+}
+.strip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+}
+.strip span.mark {
+  background: var(--rust);
+  color: var(--card);
+  border-color: var(--rust);
+}
+.strip span.today {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+}
+.occ {
+  display: grid;
+  grid-template-columns: 4.8em 1fr;
+  gap: 2px 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+}
+.occ .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+.occ .what { margin: 0; }
+.occ .place { margin: 0; color: var(--muted); font-size: 14px; grid-column: 2; }
+.more { display: inline-block; margin-top: 12px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.chip {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -.01em;
+  padding: 5px 10px 6px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.check {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+}
+.links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 4px; font-size: 15px; }
+.deck-row { display: flex; gap: 16px; align-items: flex-start; }
+.deck-n {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 64px;
+  letter-spacing: -.05em;
+  line-height: .8;
+  color: var(--rust);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+section.pull {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 2px 20px;
+  margin-bottom: 14px;
+}
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.tile {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 10px 10px 8px;
+}
+.tile .sym {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.tile .px {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 18px;
+  letter-spacing: -.02em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg.up { color: #2f5d3a; }
+.tile .chg.down { color: var(--rust); }
+.spark { margin: 2px -2px 6px; }
+.spark svg { display: block; width: 100%; }
+.caption { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.story { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.story .label { margin-bottom: 4px; }
+.story p { font-size: 15px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 8px;
+  margin: 10px 0 8px;
+}
+.stats dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.stats dd {
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+.flow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  font-size: 14px;
+  margin: 8px 0 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.flow .k { color: var(--muted); }
+.flow .v { font-variant-numeric: tabular-nums; text-align: right; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+
+
+
+.pile { margin: 6px 0 0; padding-left: 1.1em; }
+.pile li { margin: 0 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.chip { display: inline-block; border: 1px solid var(--rule); background: #fffaf0; padding: 4px 10px; font-size: 13px; border-radius: 999px; }
+.event .chip { margin-left: 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+
+.verse-card { background: transparent; border: none; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 22px 2px 20px; }
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.ref { font-size: 13px; color: var(--muted); margin: 0; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+code { font-size: 0.92em; }
+
+
+.strip .day {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 44px; border: 1px solid var(--rule); gap: 1px;
+}
+.strip .day .d { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.strip .day .n { font-size: 13px; font-variant-numeric: tabular-nums; color: var(--ink); }
+.strip .day.mark { background: var(--rust); border-color: var(--rust); }
+.strip .day.mark .d, .strip .day.mark .n { color: var(--card); }
+.strip .day.today { outline: 2px solid var(--ink); outline-offset: -2px; }
+
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <p class="kicker">Banquo · morning</p>
+        <h1>Friday</h1>
+      </div>
+      <p class="date">11 September 2026</p>
+    </header>
+
+    <section>
+      <p class="label">Calendar</p>
+      <p class="event"><time>All day</time> Sign John Bannon proposal (before EOD)</p>
+      <p class="event"><time>12:00–1:00 PM</time> Swim</p>
+    </section>
+
+    <section>
+      <p class="label">Weather · NWS / KGIF</p>
+      <p class="deg">75°</p>
+      <h2>Sunny morning · storms after 2</h2>
+      <p>Winter Haven: air ~75°F at 7 AM, climbing toward a high near 92. Mostly sunny with SSE wind around 5 mph. Scattered showers and thunderstorms after 2 PM (PoP ~50%). Tonight partly cloudy, low around 75. (Air temp only — no heat index.)</p>
+      <p class="note">Noon swim 12:00–1:00: still sunny/mostly sunny, ~88°F, light wind, PoP under 10% in the hour. Storms wait until afternoon. <strong>GO</strong> — swim before the build.</p>
+    </section>
+
+    <section>
+      <p class="label">This week</p>
+      <div class="strip" aria-label="Week of 6–12 September">
+        <div class="day"><span class="d">S</span><span class="n">6</span></div>
+        <div class="day"><span class="d">M</span><span class="n">7</span></div>
+        <div class="day mark"><span class="d">T</span><span class="n">8</span></div>
+        <div class="day"><span class="d">W</span><span class="n">9</span></div>
+        <div class="day mark"><span class="d">T</span><span class="n">10</span></div>
+        <div class="day today"><span class="d">F</span><span class="n">11</span></div>
+        <div class="day"><span class="d">S</span><span class="n">12</span></div>
+      </div>
+      <p class="event"><time>Tue 2:30 PM</time> Pick up mom → Messieh 3:00</p>
+      <p class="event"><time>Thu 11:30 AM</time> Pick up mom · Quails Run Pass</p>
+      <p class="event"><time>Thu 2:00 PM</time> Daphne speech therapy (Lakeland)</p>
+      <p class="more"><a href="2026-09-11/week.html">Open the week →</a></p>
+    </section>
+
+    <section>
+      <p class="label">Outfit</p>
+      <h2>Blind Tiger tee · muted slate blue</h2>
+      <p>Mid-70s → upper-80s, humid; showers later. Office AM, noon swim window, Bannon sign-off by EOD. Closet still tops-only (17) — bottoms/shoes blank until a dump. Alts: 98% Chimp tee (heather navy) if showers lean early; Lucky Brand henley (heather grey) for a cleaner step-up on the paperwork after the pool.</p>
+    </section>
+
+    <section>
+      <p class="label">Quill</p>
+      <div class="chips">
+        <span class="chip">pristine</span>
+        <span class="chip">acquiesce</span>
+        <span class="chip">poignant</span>
+        <span class="chip">spurious</span>
+        <span class="chip">mellifluous</span>
+      </div>
+      <p class="more"><a href="https://abrhinehart.github.io/q-4xoSqHtbUhT0tnZO/">Open lesson →</a></p>
+      <p class="note">Check in chat: Yesterday’s empty office was redolent of late nights. A remark that cuts deep emotionally rather than merely smelling of the past is which new word?</p>
+    </section>
+
+    <section>
+      <p class="label">Scout · Tape</p>
+      <div class="tiles"><div class="tile"><p class="sym">BTC</p><p class="px">$76,984</p><p class="chg down">−1.09%</p></div><div class="tile"><p class="sym">ETH</p><p class="px">$2,463</p><p class="chg">0.00%</p></div><div class="tile"><p class="sym">SOL</p><p class="px">$99.25</p><p class="chg down">−1.75%</p></div></div>
+      <div class="spark"><svg viewBox="0 0 560 72" role="img" aria-label="7-day BTC price" preserveAspectRatio="none">
+  <polyline fill="none" stroke="#9a3b24" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="4.0,12.9 96.0,4.0 188.0,24.9 280.0,36.3 372.0,39.4 464.0,68.0 556.0,64.1"/>
+</svg></div>
+      <p class="caption">7-day BTC · Yahoo Finance · tiles Coinbase (Scout) · ~7:30 AM ET</p>
+      <div class="story">
+        <p class="label">ETF bleed</p>
+        <p>Spot BTC ETFs −$282.7m Sep 10 (Farside) — third straight outflow day; three-session net −$449.5m. ARKB led (−$164.3m). ETH products −$29.9m; SOL ETFs roughly flat (−$0.5m). September still net positive through Sep 10 (~+$320.5m) into today’s CPI gate.</p>
+      </div>
+      <div class="story">
+        <p class="label">Liquid ransom</p>
+        <p>Blockstream will not pay for the ~598 BTC still held after the Sep 6 exploit — “theft, not white-hat.” Peg-ins/outs and L-BTC transfers remain suspended; empty-block production resumed after Elements v23.3.4.</p>
+      </div>
+      <div class="story">
+        <p class="label">CPI → FOMC</p>
+        <p>August CPI 8:30 AM ET today — last inflation print before FOMC Sep 15–16. Thursday’s PPI ran hot (+0.4% m/m, +5.4% y/y). Clarity Act cloture still Tue Sep 15.</p>
+      </div>
+      <p class="more"><a href="2026-09-11/scout.html">Open tape →</a></p>
+    </section>
+
+    <section>
+      <p class="label">Deck</p>
+      <h2>Catch-up swim · GO window</h2>
+      <p>Clean Friday catch-up after Thu noon skipped (mom + drone). Last logged still Aug 31’s ~300 m (150 back / 150 free). Caps still two and straps out; restock open.</p>
+    </section>
+
+    <section>
+      <p class="label">Assay</p>
+      <p><strong>ROT</strong> empty New Bot shell <code>2bc71792…</code> still live (empty description, no routines) — delete from sidebar. Stamp Wake DRIFT closed (booklet + skill now name the weekday cron). Watch: swim-day weather at 10:40 ET. Froth full pause + Scout peptide pause stay intentional.</p>
+    </section>
+
+    <section class="verse-card">
+      <p class="label">Verse</p>
+      <p class="verse">“I lift up my eyes to the mountains— where does my help come from? My help comes from the Lord, the Maker of heaven and earth.”</p>
+      <p class="ref">Psalm 121:1-2 · NIV · <a href="https://www.biblegateway.com/passage/?search=Psalm%20121%3A1-2&amp;version=NIV">Bible Gateway VOTD</a></p>
+    </section>
+
+    <section>
+      <p class="label">Astrology · Virgo</p>
+      <h2>Two pins, no third</h2>
+      <p>Proposal before end of day, swim at noon while the sky is still quiet. That’s the list — don’t invent a third errand between the pool and the signature.</p>
+      <p>Storms after two are weather’s problem, not yours, if you already signed and swam. Keep the henley option for the paperwork if the Blind Tiger gets damp.</p>
+    </section>
+  </div>
+</body>
+</html>
