@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!-- published 2026-09-16T07:10ET -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning · 16 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+
+
+:root {
+  --paper: #f3ead8;
+  --ink: #241c14;
+  --muted: #6b5a48;
+  --rule: #c9b79a;
+  --rust: #9a3b24;
+  --card: #faf4e8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background:
+    radial-gradient(1200px 700px at 20% -10%, #f7f0e0, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(36,28,20,.015) 3px),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+.page { max-width: 640px; margin: 0 auto; padding: 40px 20px 72px; }
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(40px, 10vw, 60px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  margin: 0;
+}
+.date { font-size: 13px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+section {
+  background: var(--card);
+  border: 1px solid rgba(36,28,20,.08);
+  padding: 18px 18px 16px;
+  margin-bottom: 14px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 22px;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+p { margin: 0 0 8px; font-size: 16px; }
+p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); }
+a { color: var(--rust); text-underline-offset: 3px; }
+.back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
+.back a { text-decoration: none; }
+.event {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 16px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(201,183,154,.55);
+}
+.event time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 8.2em;
+  flex-shrink: 0;
+}
+.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+.deg {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: clamp(64px, 18vw, 92px);
+  letter-spacing: -.045em;
+  line-height: .85;
+  margin: 0 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin: 6px 0 14px;
+}
+.occ {
+  display: grid;
+  grid-template-columns: 4.8em 1fr;
+  gap: 2px 12px;
+  padding: 9px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+}
+.occ .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+}
+.occ .what { margin: 0; }
+.occ .place { margin: 0; color: var(--muted); font-size: 14px; grid-column: 2; }
+.more { display: inline-block; margin-top: 12px; font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.chip {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -.01em;
+  padding: 5px 10px 6px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  border-radius: 999px;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.tile {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 10px 10px 8px;
+}
+.tile .sym {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.tile .px {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 620;
+  font-size: 18px;
+  letter-spacing: -.02em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tile .chg.up { color: #2f5d3a; }
+.tile .chg.down { color: var(--rust); }
+.spark { margin: 2px -2px 6px; }
+.spark svg { display: block; width: 100%; }
+.caption { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
+.story { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
+.story .label { margin-bottom: 4px; }
+.story p { font-size: 15px; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 8px;
+  margin: 10px 0 8px;
+}
+.stats dt {
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+.stats dd {
+  font-family: "Fraunces", Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: -.02em;
+}
+.pile { margin: 6px 0 0; padding-left: 1.1em; }
+.pile li { margin: 0 0 6px; }
+.verse-card { background: transparent; border: none; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 22px 2px 20px; }
+.verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+.ref { font-size: 13px; color: var(--muted); margin: 0; }
+footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
+code { font-size: 0.92em; }
+.strip .day {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 44px; border: 1px solid var(--rule); gap: 1px;
+}
+.strip .day .d { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.strip .day .n { font-size: 13px; font-variant-numeric: tabular-nums; color: var(--ink); }
+.strip .day.mark { background: var(--rust); border-color: var(--rust); }
+.strip .day.mark .d, .strip .day.mark .n { color: var(--card); }
+.strip .day.today { outline: 2px solid var(--ink); outline-offset: -2px; }
+
+
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <p class="kicker">Banquo · morning</p>
+        <h1>Wednesday</h1>
+      </div>
+      <p class="date">16 September 2026</p>
+    </header>
+
+    <section>
+      <p class="label">Calendar</p>
+      <p class="event"><time>8:00 AM–2:00 PM</time> Drone flights · Part 107 (not first Wednesday — no 2–5)</p>
+    </section>
+
+    <section>
+      <p class="label">Weather · NWS / KGIF</p>
+      <p class="deg">78°</p>
+      <h2>Mostly cloudy · storms after 11</h2>
+      <p>Winter Haven: air ~78°F mostly cloudy (KGIF ~6:53 AM ET). High near 90 — mostly sunny early, then scattered showers and thunderstorms after 11 AM (PoP ~40%). Northeast wind 8–17 mph, gusts as high as 28 mph. Tonight partly cloudy, low around 73.</p>
+      <p class="note">Part 107 · 8:00 AM–2:00 PM: early hours mostly sunny, NE ~9–13 mph, PoP low. Wind builds and storms enter after ~11. <strong>GO</strong> early AM with wind watch · <strong>CAUTION</strong> late morning through 2 PM. (Matches Tue evening drone brief.)</p>
+      <p class="note">Noon swim: not on today’s calendar (Wednesday is drone day). Mom PT still overrides Mon/Tue/Thu/Fri noon through ~Sep 24.</p>
+    </section>
+
+    <section>
+      <p class="label">This week</p>
+      <div class="strip" aria-label="Week of 13–19 September">
+        <div class="day"><span class="d">S</span><span class="n">13</span></div>
+        <div class="day mark"><span class="d">M</span><span class="n">14</span></div>
+        <div class="day mark"><span class="d">T</span><span class="n">15</span></div>
+        <div class="day today"><span class="d">W</span><span class="n">16</span></div>
+        <div class="day mark"><span class="d">T</span><span class="n">17</span></div>
+        <div class="day mark"><span class="d">F</span><span class="n">18</span></div>
+        <div class="day"><span class="d">S</span><span class="n">19</span></div>
+      </div>
+      <p class="event"><time>Mon / Tue / Thu / Fri noon</time> Mom physical therapy (swim paused)</p>
+      <p class="event"><time>Thu 2:00 PM</time> Daphne speech therapy</p>
+      <p class="more"><a href="2026-09-16/week.html">Open the week →</a></p>
+    </section>
+
+    <section>
+      <p class="label">Outfit</p>
+      <h2>Zelda Explore Hyrule tee · heather dark olive</h2>
+      <p>Mid-70s→low-80s · overcast/humid, AM showers possible · drone flights 8–2. Top pick: <strong>Zelda Explore Hyrule tee</strong> (heather dark olive) — darker short-sleeve for a humid outdoor block. Alts: 98% Chimp tee (heather navy); Florida word-map tee (medium blue). Closet still tops-only until bottoms/shoes dump.</p>
+    </section>
+
+    <section>
+      <p class="label">Quill</p>
+      <div class="chips">
+        <span class="chip">morose</span>
+        <span class="chip">jovial</span>
+        <span class="chip">surly</span>
+        <span class="chip">genial</span>
+        <span class="chip">volatile</span>
+      </div>
+      <p class="more"><a href="https://abrhinehart.github.io/q-4xoSqHtbUhT0tnZO/">Open lesson →</a></p>
+      <p class="note">Check in chat: Yesterday’s phlegmatic stayed cool and hard to excite. Someone whose moods swing suddenly and unpredictably is which new word?</p>
+    </section>
+
+    <section>
+      <p class="label">Scout · Tape</p>
+      <div class="tiles">
+        <div class="tile"><p class="sym">BTC</p><p class="px">$75,918</p><p class="chg down">-1.42%</p></div>
+        <div class="tile"><p class="sym">ETH</p><p class="px">$2,404</p><p class="chg down">-3.15%</p></div>
+        <div class="tile"><p class="sym">SOL</p><p class="px">$97.26</p><p class="chg down">-3.64%</p></div>
+      </div>
+      <div class="spark"><svg viewBox="0 0 560 72" role="img" aria-label="7-day BTC price" preserveAspectRatio="none">
+  <polyline fill="none" stroke="#9a3b24" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="4.0,22.0 7.5,23.3 11.1,19.0 14.6,19.5 18.2,18.3 21.7,16.1 25.2,18.0 28.8,23.2 32.3,23.1 35.8,25.5 39.4,27.4 42.9,27.5 46.5,43.6 50.0,38.9 53.5,34.8 57.1,37.7 60.6,38.6 64.2,36.4 67.7,37.6 71.2,39.3 74.8,37.3 78.3,39.5 81.8,44.6 85.4,49.2 88.9,43.4 92.5,42.2 96.0,44.5 99.5,43.6 103.1,39.9 106.6,37.5 110.2,36.9 113.7,38.0 117.2,35.7 120.8,41.0 124.3,41.9 127.8,41.1 131.4,24.7 134.9,4.2 138.5,11.2 142.0,29.5 145.5,26.1 149.1,32.8 152.6,41.0 156.2,36.6 159.7,36.2 163.2,39.6 166.8,39.3 170.3,37.8 173.8,36.8 177.4,37.1 180.9,36.5 184.5,37.0 188.0,37.9 191.5,38.0 195.1,36.6 198.6,37.0 202.2,35.6 205.7,35.7 209.2,36.1 212.8,35.6 216.3,36.0 219.8,35.4 223.4,33.9 226.9,35.2 230.5,35.7 234.0,38.1 237.5,39.2 241.1,39.6 244.6,38.8 248.2,37.3 251.7,37.6 255.2,36.9 258.8,37.1 262.3,36.3 265.8,36.8 269.4,38.4 272.9,38.2 276.5,36.4 280.0,39.7 283.5,39.7 287.1,45.0 290.6,45.3 294.2,47.7 297.7,45.6 301.2,45.9 304.8,44.4 308.3,38.3 311.8,39.6 315.4,37.0 318.9,36.3 322.5,36.1 326.0,37.1 329.5,36.1 333.1,36.6 336.6,46.7 340.2,44.7 343.7,45.2 347.2,40.0 350.8,31.8 354.3,31.8 357.8,30.5 361.4,31.6 364.9,32.0 368.5,26.9 372.0,29.5 375.5,22.7 379.1,26.7 382.6,28.9 386.2,30.2 389.7,22.2 393.2,16.2 396.8,15.2 400.3,11.9 403.8,8.7 407.4,4.0 410.9,8.1 414.5,6.2 418.0,12.0 421.5,15.4 425.1,21.3 428.6,25.6 432.2,26.2 435.7,26.4 439.2,30.6 442.8,32.1 446.3,31.1 449.8,37.2 453.4,43.3 456.9,42.1 460.5,42.2 464.0,41.1 467.5,43.1 471.1,42.6 474.6,48.5 478.2,60.6 481.7,50.3 485.2,52.6 488.8,42.7 492.3,59.4 495.8,56.0 499.4,60.3 502.9,68.0 506.5,64.7 510.0,65.2 513.5,63.0 517.1,67.7 520.6,61.1 524.2,62.3 527.7,61.6 531.2,59.7 534.8,58.7 538.3,63.3 541.8,63.7 545.4,59.4 548.9,60.1 552.5,60.5 556.0,60.4"/>
+</svg></div>
+      <p class="caption">7-day BTC · Yahoo Finance · tiles Coinbase Exchange (Scout)</p>
+      <div class="story">
+        <p class="label">Clarity cloture failed</p>
+        <p>Senate cloture on H.R. 3633 failed 49–50 Tuesday — short of 60. Tillis entered a motion to reconsider; market-structure debate stays stalled into midterms.</p>
+      </div>
+      <div class="story">
+        <p class="label">ETF outflow</p>
+        <p>Spot BTC ETFs Sep 15 net −$450.4m (heaviest since Sep 8–11 run); ETH −$142.3m; SOL still +$1.3m (Farside).</p>
+      </div>
+      <div class="story">
+        <p class="label">FOMC today</p>
+        <p>Rate decision + SEP at 2:00 PM ET; Chair Warsh presser 2:30. Futures still price a high-conviction ~25 bp hike — outcome not yet published.</p>
+      </div>
+      <p class="more"><a href="2026-09-16/scout.html">Open tape →</a></p>
+    </section>
+
+    <section>
+      <p class="label">Deck</p>
+      <h2>Wednesday noon open · last swim Aug 31</h2>
+      <p>Mom PT only overrides Mon/Tue/Thu/Fri — Wednesday noon is clean if you want water after the drone block. Last logged still Aug 31’s ~300 m (150 back / 150 free). Caps still two and straps out; restock open.</p>
+    </section>
+
+    <section>
+      <p class="label">Assay</p>
+      <p><strong>ROT</strong> empty New Bot shell still live — delete from sidebar when you can. Wed morning drone wake missed today’s 6:38 cron (Tue evening brief still carried the Part 107 call); watch next Wed. Swim-day weather stays paused for Mom PT through Sep 24.</p>
+    </section>
+
+    <section class="verse-card">
+      <p class="label">Verse</p>
+      <p class="verse">“The world and its desires pass away, but the man who does the will of God lives forever.”</p>
+      <p class="ref">1 John 2:17 · NIV · <a href="https://www.biblegateway.com/passage/?search=1%20John%202%3A17&version=NIV">Bible Gateway</a> · <a href="https://www.ourmanna.com/">OurManna daily</a></p>
+    </section>
+
+    <section>
+      <p class="label">Astrology · Virgo</p>
+      <h2>Fly early, listen later</h2>
+      <p>The useful hours are the quiet ones before the wind and the storms argue with you. Get the drone block done while the sky still cooperates, then leave afternoon for the Fed — not a second outdoor push.</p>
+      <p>Clarity already failed; you don’t have to re-litigate it in your head all morning. One clean flight window and one rate decision is enough for a Wednesday.</p>
+      <p>Thursday is Daphne at 2:00. Keep tonight light so that mark isn’t running on empty — entertainment, not orders.</p>
+    </section>
+
+    <footer>NWS / KGIF · Coinbase Exchange (Scout) · Yahoo Finance · Farside · OurManna · assembled ~7:10 AM ET</footer>
+  </div>
+</body>
+</html>
