@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<!-- published 2026-09-18T07:10ET -->
+<!-- published 2026-09-19T07:06ET -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Morning · 18 September 2026</title>
+<title>Morning · 19 September 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 <style>
-
 :root {
   --paper: #f3ead8;
   --ink: #241c14;
@@ -82,25 +81,6 @@ p { margin: 0 0 8px; font-size: 16px; }
 p:last-child { margin-bottom: 0; }
 .muted { color: var(--muted); }
 a { color: var(--rust); text-underline-offset: 3px; }
-.back { display: inline-block; margin: 0 0 14px; font-size: 14px; }
-.back a { text-decoration: none; }
-.event {
-  display: flex;
-  gap: 12px;
-  align-items: baseline;
-  font-size: 16px;
-  padding: 8px 0;
-  margin: 0;
-  border-bottom: 1px solid rgba(201,183,154,.55);
-}
-.event time {
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  min-width: 8.2em;
-  flex-shrink: 0;
-}
-.note { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
 .deg {
   font-family: "Fraunces", Georgia, serif;
   font-weight: 620;
@@ -115,6 +95,26 @@ a { color: var(--rust); text-underline-offset: 3px; }
   grid-template-columns: repeat(7, 1fr);
   gap: 3px;
   margin: 6px 0 14px;
+}
+.strip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+}
+.strip span.mark {
+  background: var(--rust);
+  color: var(--card);
+  border-color: var(--rust);
+}
+.strip span.today {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
 }
 .occ {
   display: grid;
@@ -132,7 +132,7 @@ a { color: var(--rust); text-underline-offset: 3px; }
 .occ .what { margin: 0; }
 .occ .place { margin: 0; color: var(--muted); font-size: 14px; grid-column: 2; }
 .more { display: inline-block; margin-top: 12px; font-size: 15px; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
 .chip {
   font-family: "Fraunces", Georgia, serif;
   font-weight: 500;
@@ -141,206 +141,91 @@ a { color: var(--rust); text-underline-offset: 3px; }
   padding: 5px 10px 6px;
   border: 1px solid var(--rule);
   background: var(--paper);
-  border-radius: 999px;
 }
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin: 0 0 10px;
+.check {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
 }
-.tile {
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  padding: 10px 10px 8px;
+.links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 4px; font-size: 15px; }
+section.pull {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 2px 20px;
+  margin-bottom: 14px;
 }
-.tile .sym {
-  font-size: 10px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 4px;
-}
-.tile .px {
-  font-family: "Fraunces", Georgia, serif;
-  font-weight: 620;
-  font-size: 18px;
-  letter-spacing: -.02em;
-  margin: 0;
-  font-variant-numeric: tabular-nums;
-}
-.tile .chg {
-  margin: 2px 0 0;
-  font-size: 13px;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-.tile .chg.up { color: #2f5d3a; }
-.tile .chg.down { color: var(--rust); }
-.spark { margin: 2px -2px 6px; }
-.spark svg { display: block; width: 100%; }
-.caption { font-size: 12px; color: var(--muted); margin: 0 0 10px; }
-.story { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); }
-.story .label { margin-bottom: 4px; }
-.story p { font-size: 15px; }
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px 8px;
-  margin: 10px 0 8px;
-}
-.stats dt {
-  font-size: 10px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 2px;
-}
-.stats dd {
-  font-family: "Fraunces", Georgia, serif;
-  font-variant-numeric: tabular-nums;
-  font-size: 17px;
-  margin: 0;
-  letter-spacing: -.02em;
-}
-.pile { margin: 6px 0 0; padding-left: 1.1em; }
-.pile li { margin: 0 0 6px; }
-.verse-card { background: transparent; border: none; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 22px 2px 20px; }
 .verse { font-style: italic; font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
-.ref { font-size: 13px; color: var(--muted); margin: 0; }
 footer { margin-top: 8px; font-size: 12px; color: var(--muted); }
-code { font-size: 0.92em; }
-.strip .day {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  height: 44px; border: 1px solid var(--rule); gap: 1px;
-}
-.strip .day .d { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-.strip .day .n { font-size: 13px; font-variant-numeric: tabular-nums; color: var(--ink); }
-.strip .day.mark { background: var(--rust); border-color: var(--rust); }
-.strip .day.mark .d, .strip .day.mark .n { color: var(--card); }
-.strip .day.today { outline: 2px solid var(--ink); outline-offset: -2px; }
-.look { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid rgba(201,183,154,.55); }
-.look strong { font-weight: 600; }
-table.tape {
-  width: 100%; border-collapse: collapse; font-size: 15px; margin: 8px 0 14px;
-}
-table.tape th, table.tape td {
-  text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--rule);
-  font-variant-numeric: tabular-nums;
-}
-table.tape th { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
-
 </style>
 </head>
 <body>
   <div class="page">
-
     <header>
       <div>
-        <p class="kicker">Banquo · morning</p>
-        <h1>Friday</h1>
+        <p class="kicker">Winter Haven</p>
+        <h1>Morning</h1>
       </div>
-      <p class="date">18 September 2026</p>
+      <p class="date">Saturday<br>19 September 2026</p>
     </header>
 
     <section>
-      <p class="label">Calendar</p>
-      <p class="event"><time>12:00–1:00 PM</time> Mom physical therapy</p>
-    </section>
-
-    <section>
       <p class="label">Weather · NWS / KGIF</p>
-      <p class="deg">75°</p>
-      <h2>Mostly sunny · storms after noon</h2>
-      <p>Winter Haven: air ~75°F clear (KGIF ~7:00 AM ET). High near 90 — mostly sunny this morning, then scattered showers and thunderstorms after noon. Northeast wind 6–12 mph. Tonight mostly clear after early storms, low around 72.</p>
+      <p class="deg">90°</p>
+      <h2>Mostly sunny, then storms</h2>
+      <p>High near 90. Mostly sunny this morning; scattered showers and thunderstorms after ~2 PM (~60%). Northeast wind 3 to 7 mph. Tonight storms early, then partly cloudy, low around 72. KGIF right now: clear, about 73°.</p>
     </section>
 
     <section>
       <p class="label">This week</p>
-      <div class="strip" aria-label="Week of 13–19 September">
-        <div class="day"><span class="d">S</span><span class="n">13</span></div>
-        <div class="day mark"><span class="d">M</span><span class="n">14</span></div>
-        <div class="day mark"><span class="d">T</span><span class="n">15</span></div>
-        <div class="day"><span class="d">W</span><span class="n">16</span></div>
-        <div class="day mark"><span class="d">T</span><span class="n">17</span></div>
-        <div class="day mark today"><span class="d">F</span><span class="n">18</span></div>
-        <div class="day"><span class="d">S</span><span class="n">19</span></div>
+      <div class="strip" aria-label="Week of 13 to 19 September">
+        <span>S</span><span class="mark">M</span><span class="mark">T</span><span>W</span><span class="mark">T</span><span class="mark">F</span><span class="today">S</span>
       </div>
-      <p class="event"><time>Mon / Tue / Thu / Fri noon</time> Mom physical therapy (swim paused)</p>
-      <p class="event"><time>Thu 2:00 PM</time> Daphne speech therapy</p>
-      <p class="more"><a href="2026-09-18/week.html">Open the week →</a></p>
+      <div class="occ">
+        <div class="when">Mon–Fri</div>
+        <p class="what">Mom physical therapy</p>
+        <p class="place">Noon Mon / Tue / Thu / Fri · swim paused</p>
+      </div>
+      <div class="occ">
+        <div class="when">Thu 17</div>
+        <p class="what">Daphne speech therapy</p>
+        <p class="place">2:00 PM</p>
+      </div>
+      <a class="more" href="2026-09-19/week.html">The week →</a>
     </section>
 
     <section>
-      <p class="label">Outfit</p>
-      <h2>No Boundaries striped tee · heather grey / coral</h2>
-      <p>Mid-70s→upper-80s · mostly sunny/dry early then storm risk after noon · Mom PT noon. Top pick: <strong>No Boundaries striped tee</strong> (heather grey / coral) — graphic-free short sleeve for humid heat and the cleanest walk-in for Mom’s noon PT. Alts: 98% Chimp tee (heather navy); Flamingo tee (heather teal) if the morning stays casual. Closet still tops-only until bottoms/shoes dump.</p>
-    </section>
-
-    <section>
-      <p class="label">Quill</p>
+      <p class="label">Quill · Five words</p>
       <div class="chips">
-        <span class="chip">sanguine</span>
-        <span class="chip">truculent</span>
-        <span class="chip">taciturn</span>
-        <span class="chip">loquacious</span>
-        <span class="chip">magnanimous</span>
+        <span class="chip">affable</span>
+        <span class="chip">imperious</span>
+        <span class="chip">blithe</span>
+        <span class="chip">caustic</span>
+        <span class="chip">vivacious</span>
       </div>
-      <p class="more"><a href="https://abrhinehart.github.io/q-4xoSqHtbUhT0tnZO/">Open lesson →</a></p>
-      <p class="note">Check in chat: Yesterday’s stoic endured hardship without complaint. A temperament that anticipates the best with confident hope rather than merely enduring is which new word?</p>
+      <p class="links">
+        <a href="https://abrhinehart.github.io/q-4xoSqHtbUhT0tnZO/">Open the lesson</a>
+      </p>
+      <p class="check">Yesterday’s disingenuous demeanor was not sincere. A manner that is warmly approachable and easy to converse with rather than false or calculating is which new word?</p>
     </section>
 
-    <section>
-      <p class="label">Scout · Tape</p>
-      <div class="tiles">
-        <div class="tile"><p class="sym">BTC</p><p class="px">$78,216</p><p class="chg up">+2.47%</p></div>
-        <div class="tile"><p class="sym">ETH</p><p class="px">$2,516</p><p class="chg up">+3.38%</p></div>
-        <div class="tile"><p class="sym">SOL</p><p class="px">$106.42</p><p class="chg up">+6.69%</p></div>
-      </div>
-      <div class="spark"><svg viewBox="0 0 560 72" role="img" aria-label="7-day BTC price" preserveAspectRatio="none">
-  <polyline fill="none" stroke="#9a3b24" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="4.0,36.8 14.6,37.0 25.2,36.6 35.8,35.7 46.5,36.0 57.1,35.2 67.7,39.2 78.3,37.3 88.9,37.1 99.5,38.4 110.2,39.7 120.8,45.3 131.4,45.9 142.0,39.6 152.6,36.1 163.2,36.6 173.8,45.2 184.5,31.8 195.1,32.0 205.7,22.7 216.3,30.2 226.9,15.2 237.5,4.0 248.2,12.0 258.8,25.6 269.4,30.6 280.0,37.2 290.6,42.2 301.2,42.6 311.8,50.3 322.5,59.4 333.1,68.0 343.7,63.0 354.3,62.3 364.9,58.7 375.5,59.4 386.2,59.8 396.8,62.7 407.4,65.7 418.0,59.7 428.6,53.6 439.2,52.0 449.8,51.4 460.5,51.5 471.1,47.1 481.7,46.8 492.3,49.6 502.9,52.2 513.5,49.3 524.2,36.3 534.8,32.5 545.4,22.0 556.0,19.8"/>
-</svg></div>
-      <p class="caption">7-day BTC · Yahoo Finance · tiles Coinbase Exchange (Scout)</p>
-      <div class="story">
-        <p class="label">SEC tokenized stocks</p>
-        <p>Innovation Exemption opens a five-year onchain path for tokenized NMS stocks via permissioned AMM models — Atkins: interim bridge “with or without” legislation, two days after Clarity cloture failed.</p>
-      </div>
-      <div class="story">
-        <p class="label">CFTC software relief</p>
-        <p>Staff Letters 9300-26 / 26-25 broaden Phantom-style passive trading-software no-action industry-wide when providers neither custody nor discretionary-trade.</p>
-      </div>
-      <div class="story">
-        <p class="label">Claims tight · BTC ETF flip</p>
-        <p>Initial claims 196k (−10k). Spot BTC ETFs Sep 17 net +$159.5m after two-day −$746.3m; ETH still −$39.3m; SOL flat (Farside).</p>
-      </div>
-      <p class="more"><a href="2026-09-18/scout.html">Open tape →</a></p>
-    </section>
-
-    <section>
-      <p class="label">Deck</p>
-      <p>Fri noon swim overridden by Mom PT (~through Sep 24). Last logged still Aug 31’s ~300 m (150 back / 150 free). Caps still two and straps out — restock open.</p>
-    </section>
-
-    <section>
-      <p class="label">Assay</p>
-      <p><strong>ROT</strong> empty New Bot shell still live — delete from sidebar when you can. Swim-day weather stays paused for Mom PT through Sep 24; resume wake set for Fri Sep 25 9:00 ET. Wed morning drone wake: next check Wed Sep 23.</p>
-    </section>
-
-    <section class="verse-card">
+    <section class="pull">
       <p class="label">Verse</p>
-      <p class="verse">“Do nothing out of selfish ambition or vain conceit. Rather, in humility value others above yourselves, not looking to your own interests but each of you to the interests of the others.”</p>
-      <p class="ref">Philippians 2:3-4 · NIV · <a href="https://www.biblegateway.com/passage/?search=Philippians%202%3A3-4&amp;version=NIV">Bible Gateway VOTD</a> · 18 Sep 2026</p>
+      <p class="verse">“Do not let any unwholesome talk come out of your mouths, but only what is helpful for building others up according to their needs, that it may benefit those who listen.”</p>
+      <p class="muted">Ephesians 4:29 · NIV · <a href="https://www.biblegateway.com/passage/?search=Ephesians%204%3A29&amp;version=NIV">Bible Gateway</a> · VOTD 09/19</p>
     </section>
 
     <section>
       <p class="label">Astrology · Virgo</p>
-      <h2>One noon, then the weekend</h2>
-      <p>Hand the middle of the day to Mom’s PT and let the afternoon storms do their own scheduling — you don’t need a second errand stacked on top.</p>
-      <p>The agencies already moved on tokenized stocks; you don’t have to re-trade the headlines in the truck. Entertainment, not orders — just a clean Friday close.</p>
+      <h2>Family first, promises later</h2>
+      <p>Sourced from Astrology.com’s Virgo daily for September 19 (Renee Watt): Capricorn Moon squares Neptune, and Venus later eases the tone — watch projecting frustration onto people closest to you, then make room to enjoy them.</p>
+      <p>In plain terms, Saturday’s calendar is clear. Do Quill’s five when you’re ready, skip stacking errands on top of afternoon storms, and don’t over-promise tonight if you won’t follow through.</p>
+      <p>Mom’s PT week wraps on the strip; Daphne’s Thursday slot already passed. Keep the rest light.</p>
     </section>
 
-    <footer>NWS / KGIF · Coinbase Exchange (Scout) · Yahoo Finance · Farside · Bible Gateway VOTD · assembled ~7:10 AM ET</footer>
-
+    <footer>Answer the daily check in this chat. Open day on the calendar. · NWS / KGIF · Bible Gateway VOTD · Astrology.com</footer>
   </div>
 </body>
 </html>
